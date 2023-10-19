@@ -1,0 +1,90 @@
+﻿@model LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@{
+    Layout = "_LayoutLogin";
+}
+
+<div id="auth">
+
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                @if (TempData["MessageErro"] != null)
+                {
+                    <div id="alertDiv" class="alert alert-danger">
+                        <p class="alert-heading align-items-center">@TempData["MessageErro"]</p>
+                    </div>
+                }
+            </div>
+            <div class="text-center">
+                <img src="assets/images/LogoFICAI.png" height="100" class="mb-5">
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12 mx-auto">
+            <div class="card pt-4">
+                <div class="card-body">
+                    <div class="text-center mb-2">
+                        <img src="assets/images/Login.png" height="100" class='mb-4'>
+                    </div>
+                    <form asp-action="Entrar">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group position-relative has-icon-left">
+                            <label for="username">CPF</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" id="username" asp-for="Login">
+                                @Html.ValidationMessageFor(model => model.Login,"", new {@class = "text-danger"})
+                                <div class="form-control-icon">
+                                    <i data-feather="user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group position-relative has-icon-left">
+                            <div class="clearfix">
+                                <label for="password">Senha</label>
+                            </div>
+                            <div class="position-relative">
+                                <input type="password" class="form-control" id="password" asp-for="Senha">
+                                <span asp-validation-for="Senha" class="text-danger"></span>
+                                <div class="form-control-icon">
+                                    <i data-feather="lock"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='form-check clearfix my-4 mb-5'>
+                            <div class="checkbox float-start">
+                                <input type="checkbox" id="checkbox1" class='form-check-input'>
+                                <label for="checkbox1">Lembrar de mim</label>
+                            </div>
+                            <div class="float-end">
+                                <a href="auth-forgot-password.html" class='float-end'>
+                                    <small>Esqueceu a senha?</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-block btn-primary ">ENTRAR</button>
+                        </div>
+                    </form>
+                    <div class="divider">
+                        <div class="divider-text">OU</div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="btn btn-block mb-2 btn-secondary "><i data-feather=""></i> PAINEL FICHA FICAI</button>
+                        </div>
+                        @*                            <div class="col-sm-6">
+                        <button class="btn btn-block mb-2 btn-secondary"><i data-feather="github"></i> Github</button>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

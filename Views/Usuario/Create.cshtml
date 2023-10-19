@@ -1,0 +1,68 @@
+﻿@model FichaOnline.Models.Tbusuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Tbusuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UsuarioNome" class="control-label"></label>
+                <input asp-for="UsuarioNome" class="form-control" />
+                <span asp-validation-for="UsuarioNome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioSenha" class="control-label"></label>
+                <input asp-for="UsuarioSenha" class="form-control" />
+                <span asp-validation-for="UsuarioSenha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioSenhaTemp" class="control-label"></label>
+                <input asp-for="UsuarioSenhaTemp" class="form-control" />
+                <span asp-validation-for="UsuarioSenhaTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioEmail" class="control-label"></label>
+                <input asp-for="UsuarioEmail" class="form-control" />
+                <span asp-validation-for="UsuarioEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioCpf" class="control-label"></label>
+                <input asp-for="UsuarioCpf" class="form-control" />
+                <span asp-validation-for="UsuarioCpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioStatus" class="control-label"></label>
+                <input asp-for="UsuarioStatus" class="form-control" />
+                <span asp-validation-for="UsuarioStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UsuarioEmailTran" class="control-label"></label>
+                <input asp-for="UsuarioEmailTran" class="form-control" />
+                <span asp-validation-for="UsuarioEmailTran" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoId" class="control-label"></label>
+                <select asp-for="PerfilAcessoId" class ="form-control" asp-items="ViewBag.PerfilAcessoId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,173 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "DataContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "FichaOnline",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 2,
+   "Tables": [
+      {
+         "Name": "[FICAI].[TBALUNO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBALUNOSALA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBALUNOSERIE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBBAIRRO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBCIDADE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBCONSELHO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBCONSELHOBAIRROS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBDashBoard]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBDiretoriaRegional]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBDIRETORIAREGIONALCIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBESCOLA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBESTADO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBFICHACATEGORIA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBFICHAFICAI]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBFICHAITEMOPCAO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBFICHAMODELO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBFICHASTATUS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBHISTFICAI]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBHISTPARM]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBHISTSTATUSPERFILACESSO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBMENU]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBMENUPERFILACESSO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBMINISTERIO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBMINISTERIOCIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPARAMETRO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPARMPRAZO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPERFILACESSO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPOLO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPOLOMODELO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBPOLOORGAO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBSTATUSPERFILACESSO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBTRAMITE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBUSUARIO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[FICAI].[TBUSUARIOORGAO]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "descartes\\mssql_des03.ficaihmg.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

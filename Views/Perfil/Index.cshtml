@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.Tbperfilacesso>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoNivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PerfilAcessoAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoNivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerfilAcessoAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PerfilAcessoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PerfilAcessoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PerfilAcessoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

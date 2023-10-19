@@ -1,0 +1,58 @@
+﻿@model FichaOnline.Models.Tbperfilacesso
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Tbperfilacesso</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoDesc" class="control-label"></label>
+                <input asp-for="PerfilAcessoDesc" class="form-control" />
+                <span asp-validation-for="PerfilAcessoDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoNivel" class="control-label"></label>
+                <input asp-for="PerfilAcessoNivel" class="form-control" />
+                <span asp-validation-for="PerfilAcessoNivel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoIncPor" class="control-label"></label>
+                <input asp-for="PerfilAcessoIncPor" class="form-control" />
+                <span asp-validation-for="PerfilAcessoIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoIncEm" class="control-label"></label>
+                <input asp-for="PerfilAcessoIncEm" class="form-control" />
+                <span asp-validation-for="PerfilAcessoIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoAltPor" class="control-label"></label>
+                <input asp-for="PerfilAcessoAltPor" class="form-control" />
+                <span asp-validation-for="PerfilAcessoAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PerfilAcessoAltEm" class="control-label"></label>
+                <input asp-for="PerfilAcessoAltEm" class="form-control" />
+                <span asp-validation-for="PerfilAcessoAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
