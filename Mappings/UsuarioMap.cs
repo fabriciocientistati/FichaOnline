@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FichaOnline.Mappings
 {
-    public class UsuarioMap : IEntityTypeConfiguration<Tbusuario>
+    public class UsuarioMap : IEntityTypeConfiguration<Tbusuarios>
     {
-        public void Configure(EntityTypeBuilder<Tbusuario> builder)
+        public void Configure(EntityTypeBuilder<Tbusuarios> builder)
         {
-            builder.ToTable("TBUSUARIO");
+            builder.ToTable("TBUsuario");
         }
     }
 }

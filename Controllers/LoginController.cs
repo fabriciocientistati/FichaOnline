@@ -31,20 +31,20 @@ namespace FichaOnline.Controllers
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     //var user = await _userManager.FindByNameAsync(ModelLogin.Login);
-                    Tbusuario usuario = _db.TBUSUARIO.FirstOrDefault(x => x.UsuarioCpf == ModelLogin.Login);
+                    Tbusuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioCpf == ModelLogin.Login);
                     if (usuario != null)
                     {
                         //var result = await _signInManager.PasswordSignInAsync(user, ModelLogin.Senha, ModelLogin.Relembrar, false);
                         //if (result.Succeeded)
                         //{
-                            if (ModelLogin.Login == usuario.UsuarioCpf && ModelLogin.Senha.GerarHash() == usuario.UsuarioSenha)
-                            {
-                                return RedirectToAction("Index", "Home");
-                            }
-                            TempData["MessageErro"] = "Senha do usuário é invalida, tente novamente.";
+                        if (ModelLogin.Login == usuario.UsuarioCpf && ModelLogin.Senha.GerarHash() == usuario.UsuarioSenha)
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
+                        TempData["MessageErro"] = "Senha do usuário é invalida, tente novamente.";
                         //}
                     }
                     TempData["MessageErro"] = "Usuário e/ou senha inválido(a). Tente novamente.";
@@ -55,7 +55,7 @@ namespace FichaOnline.Controllers
             {
                 TempData["MessageErro"] = $"Ops, não conseguimos realizar o login, tente novamente? detalhe do erro? {error.Message}";
                 return RedirectToAction("Index");
-            } 
+            }
         }
     }
 }

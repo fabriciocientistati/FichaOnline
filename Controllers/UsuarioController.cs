@@ -21,18 +21,18 @@ namespace FichaOnline.Controllers
 
         public IActionResult Index()
         {
-            var dataBaseContext = _db.TBUSUARIO.Include(t => t.PerfilAcesso);
+            var dataBaseContext = _db.TBUSUARIOS.Include(t => t.PerfilAcesso);
             return View(dataBaseContext.ToList());
         }
 
         public IActionResult Detalhes(int? id)
         {
-            if (id == null || _db.TBUSUARIO == null)
+            if (id == null || _db.TBUSUARIOS == null)
             {
                 return NotFound();
             }
 
-            var tbusuario = _db.TBUSUARIO
+            var tbusuario = _db.TBUSUARIOS
                 .Include(x => x.PerfilAcesso)
                 .FirstOrDefault(x => x.UsuarioId == id);
 
@@ -52,7 +52,7 @@ namespace FichaOnline.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Tbusuario usuario)
+        public IActionResult Create(Tbusuarios usuario)
         {
             //if (!User.Identity.IsAuthenticated)
             //{
@@ -66,7 +66,7 @@ namespace FichaOnline.Controllers
                 usuario.SetSenhaHash();
                 usuario.UsuarioIncEm = DateTime.Now;
                 //usuario.UsuarioIncPor = userId;
-                _db.TBUSUARIO.Add(usuario);
+                _db.TBUSUARIOS.Add(usuario);
                 _db.SaveChanges();
 
                 return RedirectToAction("Index");
@@ -76,12 +76,12 @@ namespace FichaOnline.Controllers
 
         public IActionResult Editar(int? id)
         {
-            if (id == null || _db.TBUSUARIO == null)
+            if (id == null || _db.TBUSUARIOS == null)
             {
                 return NotFound();
             }
 
-            Tbusuario usuario = _db.TBUSUARIO.FirstOrDefault(x => x.UsuarioId == id);
+            Tbusuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioId == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -92,14 +92,14 @@ namespace FichaOnline.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Editar(Tbusuario usuario)
+        public IActionResult Editar(Tbusuarios usuario)
         {
             if (ModelState.IsValid)
             {
                 if (usuario != null)
                 {
                     usuario.UsuarioAltEm = DateTime.Now;
-                    _db.TBUSUARIO.Update(usuario);
+                    _db.TBUSUARIOS.Update(usuario);
                     _db.SaveChanges();
 
                     return RedirectToAction("Index");
@@ -110,12 +110,12 @@ namespace FichaOnline.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _db.TBUSUARIO == null)
+            if (id == null || _db.TBUSUARIOS == null)
             {
                 return NotFound();
             }
 
-            var tbusuario = await _db.TBUSUARIO
+            var tbusuario = await _db.TBUSUARIOS
                 .Include(t => t.PerfilAcesso)
                 .FirstOrDefaultAsync(m => m.UsuarioId == id);
             if (tbusuario == null)
@@ -130,14 +130,14 @@ namespace FichaOnline.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_db.TBUSUARIO == null)
+            if (_db.TBUSUARIOS == null)
             {
                 return Problem("Entity set 'DataBaseContext.TBUSUARIO'  is null.");
             }
-            var tbusuario = await _db.TBUSUARIO.FindAsync(id);
+            var tbusuario = await _db.TBUSUARIOS.FindAsync(id);
             if (tbusuario != null)
             {
-                _db.TBUSUARIO.Remove(tbusuario);
+                _db.TBUSUARIOS.Remove(tbusuario);
             }
 
             await _db.SaveChangesAsync();
@@ -146,7 +146,7 @@ namespace FichaOnline.Controllers
 
         private bool TbusuarioExists(int id)
         {
-            return (_db.TBUSUARIO?.Any(e => e.UsuarioId == id)).GetValueOrDefault();
+            return (_db.TBUSUARIOS?.Any(e => e.UsuarioId == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-#nullable disable
+﻿#nullable disable
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,7 +11,8 @@ public partial class Tbperfilacesso
     {
         PerfilAcessoIncEm = DateTime.Now;
     }
-    public Tbperfilacesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<Tbusuario> usuarios) : this()
+
+    public Tbperfilacesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<Tbusuarios> usuarios) : this()
     {
         PerfilAcessoId = perfilAcessoId;
         PerfilAcessoDesc = perfilAcessoDesc;
@@ -26,19 +26,11 @@ public partial class Tbperfilacesso
 
     [Key]
     public int PerfilAcessoId { get; set; }
-
     public string PerfilAcessoDesc { get; set; }
-
     public short PerfilAcessoNivel { get; set; }
-
     public int PerfilAcessoIncPor { get; set; }
-
     public DateTime PerfilAcessoIncEm { get; set; } = DateTime.Now;
-
     public int? PerfilAcessoAltPor { get; set; }
-
     public DateTime? PerfilAcessoAltEm { get; set; } = DateTime.Now;
-
-    public List<Tbusuario> Usuarios { get; set; }
-
+    public List<Tbusuarios> Usuarios { get; set; }
 }
