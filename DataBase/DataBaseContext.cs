@@ -8,7 +8,7 @@ namespace FichaOnline.Data
     {
         public DataBaseContext(DbContextOptions options): base(options) { }
 
-        public DbSet<Tbusuarios> TBUSUARIOS { get; set; }
+        public DbSet<TBUsuarios> TBUSUARIOS { get; set; }
         public DbSet<Tbperfilacesso> TBPERFILACESSO { get; set; }
         public DbSet<TBUnidades> TBUNIDADES { get; set; }
         public DbSet<TBUnidadeTipos> TBUNIDADETIPOS { get; set; }
@@ -22,7 +22,7 @@ namespace FichaOnline.Data
             modelBuilder.Entity<TBUnidades>()
                 .HasKey(x => x.UnidadeId);
 
-            modelBuilder.Entity<Tbusuarios>()
+            modelBuilder.Entity<TBUsuarios>()
                 .HasKey(x => x.UsuarioId);
 
             modelBuilder.Entity<TBPolo>()

@@ -12,7 +12,7 @@ public partial class Tbperfilacesso
         PerfilAcessoIncEm = DateTime.Now;
     }
 
-    public Tbperfilacesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<Tbusuarios> usuarios) : this()
+    public Tbperfilacesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<TBUsuarios> usuarios) : this()
     {
         PerfilAcessoId = perfilAcessoId;
         PerfilAcessoDesc = perfilAcessoDesc;
@@ -32,5 +32,5 @@ public partial class Tbperfilacesso
     public DateTime PerfilAcessoIncEm { get; set; } = DateTime.Now;
     public int? PerfilAcessoAltPor { get; set; }
     public DateTime? PerfilAcessoAltEm { get; set; } = DateTime.Now;
-    public List<Tbusuarios> Usuarios { get; set; }
+    public List<TBUsuarios> Usuarios { get; set; }
 }

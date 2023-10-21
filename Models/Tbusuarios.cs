@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FichaOnline.Models;
 
-public partial class Tbusuarios
+public partial class TBUsuarios
 {
-    public Tbusuarios() => 
+    public TBUsuarios() => 
         UsuarioIncEm = DateTime.Now;
 
-    public Tbusuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, Tbperfilacesso perfilAcesso, TBUnidades unidades) : this()
+    public TBUsuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, Tbperfilacesso perfilAcesso, TBUnidades unidades) : this()
     {
         UsuarioId = usuarioId;
         UsuarioNome = usuarioNome;

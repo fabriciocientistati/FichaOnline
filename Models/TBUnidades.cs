@@ -30,6 +30,6 @@ namespace FichaOnline.Models
         public int PoloId { get; set; }
         public TBUnidadeTipos TiposUnidade { get; set; }
         public TBPolo PolosAssociados { get; set; }
-        public List<Tbusuarios> Usuarios { get; set; }
+        public List<TBUsuarios> Usuarios { get; set; }
     }
 }

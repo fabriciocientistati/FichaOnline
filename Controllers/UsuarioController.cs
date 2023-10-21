@@ -47,12 +47,13 @@ namespace FichaOnline.Controllers
         public IActionResult Create()
         {
             ViewData["PerfilAcessoId"] = new SelectList(_db.TBPERFILACESSO, "PerfilAcessoId", "PerfilAcessoDesc");
+            ViewData["UnidadeId"] = new SelectList(_db.TBUNIDADES, "UnidadeId", "UnidadeDesc");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Tbusuarios usuario)
+        public IActionResult Create(TBUsuarios usuario)
         {
             //if (!User.Identity.IsAuthenticated)
             //{
@@ -81,7 +82,7 @@ namespace FichaOnline.Controllers
                 return NotFound();
             }
 
-            Tbusuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioId == id);
+            TBUsuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioId == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -92,7 +93,7 @@ namespace FichaOnline.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Editar(Tbusuarios usuario)
+        public IActionResult Editar(TBUsuarios usuario)
         {
             if (ModelState.IsValid)
             {

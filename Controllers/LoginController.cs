@@ -34,7 +34,7 @@ namespace FichaOnline.Controllers
                 if (ModelState.IsValid)
                 {
                     //var user = await _userManager.FindByNameAsync(ModelLogin.Login);
-                    Tbusuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioCpf == ModelLogin.Login);
+                    TBUsuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioCpf == ModelLogin.Login);
                     if (usuario != null)
                     {
                         //var result = await _signInManager.PasswordSignInAsync(user, ModelLogin.Senha, ModelLogin.Relembrar, false);
