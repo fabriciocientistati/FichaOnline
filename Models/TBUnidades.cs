@@ -10,6 +10,30 @@ namespace FichaOnline.Models
             UnidadeIncEm = DateTime.Now;
         }
 
+        public TBUnidades(int unidadeId, int unidadeCod, string unidadeDesc, string unidadeStatus, string unidadeEmail, string unidadeDDD, string unidadeFone, string unidadeCEP, string unidadeEndNmr, string unidadeEndLog, string unidadeEndComp, int unidadeIncPor, DateTime unidadeIncEm, int? unidadeAltPor, DateTime? unidadeAltEm, int unidadesTpoId, int poloId, TBUnidadeTipos tiposUnidade, TBPolo polo, List<TBUsuarios> usuarios) : this()
+        {
+            UnidadeId = unidadeId;
+            UnidadeCod = unidadeCod;
+            UnidadeDesc = unidadeDesc;
+            UnidadeStatus = unidadeStatus;
+            UnidadeEmail = unidadeEmail;
+            UnidadeDDD = unidadeDDD;
+            UnidadeFone = unidadeFone;
+            UnidadeCEP = unidadeCEP;
+            UnidadeEndNmr = unidadeEndNmr;
+            UnidadeEndLog = unidadeEndLog;
+            UnidadeEndComp = unidadeEndComp;
+            UnidadeIncPor = unidadeIncPor;
+            UnidadeIncEm = unidadeIncEm;
+            UnidadeAltPor = unidadeAltPor;
+            UnidadeAltEm = unidadeAltEm;
+            UnidadesTpoId = unidadesTpoId;
+            PoloId = poloId;
+            TiposUnidade = tiposUnidade;
+            Polo = polo;
+            Usuarios = usuarios;
+        }
+
         [Key]
         public int UnidadeId { get; set; }
         public int UnidadeCod { get; set; }
@@ -22,14 +46,14 @@ namespace FichaOnline.Models
         public string UnidadeEndNmr { get; set; }
         public string UnidadeEndLog { get; set; }
         public string UnidadeEndComp { get; set; }
-        public string UnidadeIncPor { get; set; }
+        public int UnidadeIncPor { get; set; }
         public DateTime UnidadeIncEm { get; set; } = DateTime.Now;
-        public string? UnidadeAltPor { get; set; }
-        public DateTime? UnidadeAltEm { get;set; } = DateTime.Now;
+        public int? UnidadeAltPor { get; set; }
+        public DateTime? UnidadeAltEm { get;set; } 
         public int UnidadesTpoId { get; set; }
-        public int PoloId { get; set; }
         public TBUnidadeTipos TiposUnidade { get; set; }
-        public TBPolo PolosAssociados { get; set; }
+        public int PoloId { get; set; }
+        public TBPolo Polo { get; set; }
         public List<TBUsuarios> Usuarios { get; set; }
     }
 }

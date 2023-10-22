@@ -22,6 +22,37 @@ namespace FichaOnline.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("FichaOnline.Models.TBPerfilacesso", b =>
+                {
+                    b.Property<int>("PerfilAcessoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PerfilAcessoId"));
+
+                    b.Property<DateTime?>("PerfilAcessoAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("PerfilAcessoAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PerfilAcessoDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PerfilAcessoIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PerfilAcessoIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<short>("PerfilAcessoNivel")
+                        .HasColumnType("smallint");
+
+                    b.HasKey("PerfilAcessoId");
+
+                    b.ToTable("TBPERFILACESSO");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBPolo", b =>
                 {
                     b.Property<int>("PoloId")
@@ -101,8 +132,8 @@ namespace FichaOnline.Migrations
                     b.Property<DateTime?>("UnidadeAltEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UnidadeAltPor")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("UnidadeAltPor")
+                        .HasColumnType("int");
 
                     b.Property<string>("UnidadeCEP")
                         .HasColumnType("nvarchar(max)");
@@ -134,8 +165,8 @@ namespace FichaOnline.Migrations
                     b.Property<DateTime>("UnidadeIncEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UnidadeIncPor")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("UnidadeIncPor")
+                        .HasColumnType("int");
 
                     b.Property<string>("UnidadeStatus")
                         .HasColumnType("nvarchar(max)");
@@ -208,40 +239,9 @@ namespace FichaOnline.Migrations
                     b.ToTable("TBUSUARIOS");
                 });
 
-            modelBuilder.Entity("FichaOnline.Models.Tbperfilacesso", b =>
-                {
-                    b.Property<int>("PerfilAcessoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PerfilAcessoId"));
-
-                    b.Property<DateTime?>("PerfilAcessoAltEm")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("PerfilAcessoAltPor")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PerfilAcessoDesc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("PerfilAcessoIncEm")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PerfilAcessoIncPor")
-                        .HasColumnType("int");
-
-                    b.Property<short>("PerfilAcessoNivel")
-                        .HasColumnType("smallint");
-
-                    b.HasKey("PerfilAcessoId");
-
-                    b.ToTable("TBPERFILACESSO");
-                });
-
             modelBuilder.Entity("FichaOnline.Models.TBUnidades", b =>
                 {
-                    b.HasOne("FichaOnline.Models.TBPolo", "PolosAssociados")
+                    b.HasOne("FichaOnline.Models.TBPolo", "Polo")
                         .WithMany("Unidades")
                         .HasForeignKey("PoloId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -253,17 +253,17 @@ namespace FichaOnline.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("PolosAssociados");
+                    b.Navigation("Polo");
 
                     b.Navigation("TiposUnidade");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBUsuarios", b =>
                 {
-                    b.HasOne("FichaOnline.Models.Tbperfilacesso", "PerfilAcesso")
+                    b.HasOne("FichaOnline.Models.TBPerfilacesso", "PerfilAcesso")
                         .WithMany("Usuarios")
                         .HasForeignKey("PerfilAcessoId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBUnidades", "Unidades")
@@ -277,6 +277,11 @@ namespace FichaOnline.Migrations
                     b.Navigation("Unidades");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBPerfilacesso", b =>
+                {
+                    b.Navigation("Usuarios");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBPolo", b =>
                 {
                     b.Navigation("Unidades");
@@ -288,11 +293,6 @@ namespace FichaOnline.Migrations
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBUnidades", b =>
-                {
-                    b.Navigation("Usuarios");
-                });
-
-            modelBuilder.Entity("FichaOnline.Models.Tbperfilacesso", b =>
                 {
                     b.Navigation("Usuarios");
                 });

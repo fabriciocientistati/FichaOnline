@@ -23,5 +23,5 @@ public partial class Tbtramite
 
     public virtual Tbfichacategoria FichaCat { get; set; }
 
-    public virtual Tbperfilacesso PerfilAcesso { get; set; }
+    public virtual TBPerfilacesso PerfilAcesso { get; set; }
 }

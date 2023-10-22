@@ -9,14 +9,14 @@ namespace FichaOnline.Data
         public DataBaseContext(DbContextOptions options): base(options) { }
 
         public DbSet<TBUsuarios> TBUSUARIOS { get; set; }
-        public DbSet<Tbperfilacesso> TBPERFILACESSO { get; set; }
+        public DbSet<TBPerfilacesso> TBPERFILACESSO { get; set; }
         public DbSet<TBUnidades> TBUNIDADES { get; set; }
         public DbSet<TBUnidadeTipos> TBUNIDADETIPOS { get; set; }
         public DbSet<TBPolo> TBPOLO { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Tbperfilacesso>()
+            modelBuilder.Entity<TBPerfilacesso>()
                 .HasKey(x => x.PerfilAcessoId);
 
             modelBuilder.Entity<TBUnidades>()
@@ -31,12 +31,6 @@ namespace FichaOnline.Data
             modelBuilder.Entity<TBUnidadeTipos>()
                 .HasKey(x => x.UnidadeTpoId);
 
-            modelBuilder.Entity<Tbperfilacesso>()
-                .HasMany(p => p.Usuarios)
-                .WithOne(u => u.PerfilAcesso)
-                .HasForeignKey(u => u.PerfilAcessoId)
-                .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<TBUnidades>()
                 .HasMany(un => un.Usuarios)
                 .WithOne(u => u.Unidades)
@@ -44,7 +38,7 @@ namespace FichaOnline.Data
 
             modelBuilder.Entity<TBPolo>()
                 .HasMany(p => p.Unidades)
-                .WithOne(un => un.PolosAssociados)
+                .WithOne(un => un.Polo)
                 .HasForeignKey(un => un.PoloId);
 
             modelBuilder.Entity<TBUnidadeTipos>()

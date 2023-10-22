@@ -31,7 +31,7 @@ namespace FichaOnline.Models
         public int UnidadeTpoIncPor { get; set; }
         public DateTime UnidadeTpoIncEm { get; set; } = DateTime.Now;
         public int? UnidadeTpoAltPor { get; set; }
-        public DateTime? UnidadeTpoAltEm { get; set; } = DateTime.Now;
+        public DateTime? UnidadeTpoAltEm { get; set; }
         public List<TBUnidades> Unidade { get; set; }
         
     }

@@ -23,5 +23,5 @@ public partial class Tbmenuperfilacesso
 
     public virtual Tbmenu Menu { get; set; }
 
-    public virtual Tbperfilacesso PerfilAcesso { get; set; }
+    public virtual TBPerfilacesso PerfilAcesso { get; set; }
 }

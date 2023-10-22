@@ -9,7 +9,7 @@ public partial class TBUsuarios
     public TBUsuarios() => 
         UsuarioIncEm = DateTime.Now;
 
-    public TBUsuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, Tbperfilacesso perfilAcesso, TBUnidades unidades) : this()
+    public TBUsuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, TBPerfilacesso perfilAcesso, TBUnidades unidades) : this()
     {
         UsuarioId = usuarioId;
         UsuarioNome = usuarioNome;
@@ -40,11 +40,11 @@ public partial class TBUsuarios
     public int UsuarioIncPor { get; set; }
     public DateTime UsuarioIncEm { get; set; } = DateTime.Now;
     public int? UsuarioAltPor { get; set; }
-    public DateTime? UsuarioAltEm { get; set; } = DateTime.Now;
+    public DateTime? UsuarioAltEm { get; set; }
     public short UsuarioEmailTran { get; set; }
     public int PerfilAcessoId { get; set; }
     public int UnidadeId { get; set; }
-    public Tbperfilacesso PerfilAcesso { get; set; }
+    public TBPerfilacesso PerfilAcesso { get; set; }
     public TBUnidades Unidades { get; set; }
 
     public void SetSenhaHash()

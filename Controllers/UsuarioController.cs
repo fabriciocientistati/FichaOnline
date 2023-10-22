@@ -33,7 +33,7 @@ namespace FichaOnline.Controllers
             }
 
             var tbusuario = _db.TBUSUARIOS
-                .Include(x => x.PerfilAcesso)
+                .Include(x => x.PerfilAcesso).Include(a => a.Unidades)
                 .FirstOrDefault(x => x.UsuarioId == id);
 
             if (tbusuario == null)
@@ -82,7 +82,7 @@ namespace FichaOnline.Controllers
                 return NotFound();
             }
 
-            TBUsuarios usuario = _db.TBUSUARIOS.FirstOrDefault(x => x.UsuarioId == id);
+            TBUsuarios usuario = _db.TBUSUARIOS.First(x => x.UsuarioId == id);
             if (usuario == null)
             {
                 return NotFound();
