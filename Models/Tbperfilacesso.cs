@@ -26,11 +26,18 @@ public partial class TBPerfilacesso
 
     [Key]
     public int PerfilAcessoId { get; set; }
+
     public string PerfilAcessoDesc { get; set; }
+
     public short PerfilAcessoNivel { get; set; }
+
     public int PerfilAcessoIncPor { get; set; }
+
     public DateTime PerfilAcessoIncEm { get; set; } = DateTime.Now;
+
     public int? PerfilAcessoAltPor { get; set; }
+
     public DateTime? PerfilAcessoAltEm { get; set; }
+
     public List<TBUsuarios> Usuarios { get; set; }
 }

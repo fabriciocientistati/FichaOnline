@@ -53,5 +53,5 @@ public partial class Tbescola
 
     public string EscCategoria { get; set; }
 
-    public virtual ICollection<Tbfichaficai> Tbfichaficai { get; set; } = new List<Tbfichaficai>();
+    public virtual ICollection<TBFicha> Tbfichaficai { get; set; } = new List<TBFicha>();
 }

@@ -21,7 +21,7 @@ public partial class Tbfichacategoria
 
     public DateTime? FichaCatAltEm { get; set; }
 
-    public virtual ICollection<Tbfichaficai> Tbfichaficai { get; set; } = new List<Tbfichaficai>();
+    public virtual ICollection<TBFicha> Tbfichaficai { get; set; } = new List<TBFicha>();
 
     public virtual ICollection<Tbhiststatusperfilacesso> Tbhiststatusperfilacesso { get; set; } = new List<Tbhiststatusperfilacesso>();
 

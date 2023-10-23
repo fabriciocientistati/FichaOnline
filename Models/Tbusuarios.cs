@@ -31,21 +31,37 @@ public partial class TBUsuarios
 
     [Key]
     public int UsuarioId { get; set; }
+
     public string UsuarioNome { get; set; }
+
     public string UsuarioSenha { get; set; }
+
     public int UsuarioSenhaTemp { get; set; }
+
     public string UsuarioEmail { get; set; }
+
     public string UsuarioCpf { get; set; }
+
     public string UsuarioStatus { get; set; }
+
     public int UsuarioIncPor { get; set; }
+
     public DateTime UsuarioIncEm { get; set; } = DateTime.Now;
+
     public int? UsuarioAltPor { get; set; }
+
     public DateTime? UsuarioAltEm { get; set; }
+
     public short UsuarioEmailTran { get; set; }
+
     public int PerfilAcessoId { get; set; }
+
     public int UnidadeId { get; set; }
+
     public TBPerfilacesso PerfilAcesso { get; set; }
+
     public TBUnidades Unidades { get; set; }
+
 
     public void SetSenhaHash()
     {

@@ -12,7 +12,7 @@ public partial class TBPolo
         PoloIncEm = DateTime.Now;
     }
 
-    public TBPolo(int poloId, string poloNome, string poloStatus, int poloIncPor, DateTime poloIncEm, int? poloAltPor, DateTime? poloAltEm, List<TBUnidades> unidades) : this()
+    public TBPolo(int poloId, string poloNome, string poloStatus, int poloIncPor, DateTime poloIncEm, int? poloAltPor, DateTime? poloAltEm, List<TBUnidades> unidadePolos) : this()
     {
         PoloId = poloId;
         PoloNome = poloNome;
@@ -21,16 +21,23 @@ public partial class TBPolo
         PoloIncEm = poloIncEm;
         PoloAltPor = poloAltPor;
         PoloAltEm = poloAltEm;
-        Unidades = unidades;
+        UnidadePolos = unidadePolos;
     }
 
     [Key]
     public int PoloId { get; set; }
+
     public string PoloNome { get; set; }
+
     public string PoloStatus { get; set; }
+
     public int PoloIncPor { get; set; }
+
     public DateTime PoloIncEm { get; set; } = DateTime.Now;
+
     public int? PoloAltPor { get; set; }
+
     public DateTime? PoloAltEm { get; set; }
-    public List<TBUnidades> Unidades { get; set; }
+
+    public List<TBUnidades> UnidadePolos { get; set; }
 }

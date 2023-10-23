@@ -32,17 +32,17 @@ namespace FichaOnline.Data
                 .HasKey(x => x.UnidadeTpoId);
 
             modelBuilder.Entity<TBUnidades>()
-                .HasMany(un => un.Usuarios)
+                .HasMany(un => un.UnidadeUsuarios)
                 .WithOne(u => u.Unidades)
                 .HasForeignKey(u => u.UnidadeId);
 
             modelBuilder.Entity<TBPolo>()
-                .HasMany(p => p.Unidades)
+                .HasMany(p => p.UnidadePolos)
                 .WithOne(un => un.Polo)
                 .HasForeignKey(un => un.PoloId);
 
             modelBuilder.Entity<TBUnidadeTipos>()
-                .HasMany(ut => ut.Unidade)
+                .HasMany(ut => ut.UnidadeUnidadeTipos)
                 .WithOne(un => un.TiposUnidade)
                 .HasForeignKey(un => un.UnidadesTpoId);
         }
