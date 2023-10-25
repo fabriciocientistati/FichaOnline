@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FichaOnline
 build_property.RootNamespace = FichaOnline
-build_property.ProjectDir = C:\Desenvolvimento\Repositorio\FichaOnline\
+build_property.ProjectDir = D:\Repository\fabriciocientistati\FichaOnline2.0\FichaOnline\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Desenvolvimento\Repositorio\FichaOnline
+build_property.MSBuildProjectDirectory = D:\Repository\fabriciocientistati\FichaOnline2.0\FichaOnline
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Home/Index.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Home/Privacy.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Login/Index.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Perfil/Create.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Perfil/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Perfil/Delete.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Perfil/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Perfil/Details.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Perfil/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Perfil/Edit.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Perfil/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Perfil/Index.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Perfil/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Shared/Error.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Shared/_LayoutLogin.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Usuario/Create.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Usuario/Delete.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Usuario/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Usuario/Detalhes.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Usuario/Detalhes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhbGhlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Usuario/Editar.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Usuario/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Usuario/Index.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/_ViewImports.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/_ViewStart.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desenvolvimento/Repositorio/FichaOnline/Views/Shared/_Layout.cshtml]
+[D:/Repository/fabriciocientistati/FichaOnline2.0/FichaOnline/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ufm0zcojj7
