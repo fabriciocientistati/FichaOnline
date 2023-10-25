@@ -21,7 +21,7 @@ public partial class Tbtramite
 
     public DateTime TramiteIncEm { get; set; }
 
-    public virtual Tbfichacategoria FichaCat { get; set; }
+    public virtual TBCategoria FichaCat { get; set; }
 
     public virtual TBPerfilacesso PerfilAcesso { get; set; }
 }

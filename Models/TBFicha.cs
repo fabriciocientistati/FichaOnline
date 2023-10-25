@@ -20,7 +20,7 @@ public partial class TBFicha
 
     public int AluId { get; set; }
 
-    public int FichaEscUnidadeId { get; set; }
+    public int FichaEscOrigemUnidadeId { get; set; }
 
     public DateTime FichaDtaIni { get; set; }
 
@@ -34,11 +34,9 @@ public partial class TBFicha
 
     public DateTime? FichaAltEm { get; set; }
 
-    public string FichaOrgTipo { get; set; }
-
-    //public virtual Tbaluno Alu { get; set; }
+    public TBAluno FichaAluno { get; set; }
 
     public virtual Tbescola Esc { get; set; }
 
-    public virtual Tbfichacategoria FichaCat { get; set; }
+    public TBCategoria FichaCategoria { get; set; }
 }

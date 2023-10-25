@@ -25,7 +25,7 @@ public partial class Tbstatusperfilacesso
 
     public DateTime StatusPerfilAcessoAltEm { get; set; }
 
-    public virtual Tbfichacategoria FichaCat { get; set; }
+    public virtual TBCategoria FichaCat { get; set; }
 
     public virtual Tbfichastatus FichaSts { get; set; }
 

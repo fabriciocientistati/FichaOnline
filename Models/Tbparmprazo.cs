@@ -25,5 +25,5 @@ public partial class Tbparmprazo
 
     public DateTime ParmPrazoAltEm { get; set; }
 
-    public virtual Tbfichacategoria FichaCat { get; set; }
+    public virtual TBCategoria FichaCat { get; set; }
 }
