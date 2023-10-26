@@ -36,7 +36,9 @@ public partial class TBFicha
 
     public TBAluno FichaAluno { get; set; }
 
-    public virtual Tbescola Esc { get; set; }
+    public Tbescola Esc { get; set; }
+
+    public TBFichaProvidenciasResp FichaFichaProv { get; set; }
 
     public TBCategoria FichaCategoria { get; set; }
 }

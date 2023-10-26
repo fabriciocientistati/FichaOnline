@@ -22,7 +22,7 @@ public partial class TBCategoria
 
     public DateTime? CatAltEm { get; set; } = DateTime.Now;
 
-    public TBCategoriaOpcoes CategoriaOpcoes { get; set; }
     public List<TBFicha> CategoriaFicha { get; set; }
-
+   
+    public List<TBCategoriaOpcoes> CategoriaCategoriaOpcoes { get; set; }
 }
