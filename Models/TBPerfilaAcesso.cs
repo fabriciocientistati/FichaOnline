@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FichaOnline.Models;
 
-public partial class TBPerfilacesso
+public partial class TBPerfilaAcesso
 {
-    public TBPerfilacesso()
+    public TBPerfilaAcesso()
     {
         PerfilAcessoIncEm = DateTime.Now;
     }
 
-    public TBPerfilacesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<TBUsuarios> usuarios) : this()
+    public TBPerfilaAcesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<TBUsuarios> usuarios) : this()
     {
         PerfilAcessoId = perfilAcessoId;
         PerfilAcessoDesc = perfilAcessoDesc;

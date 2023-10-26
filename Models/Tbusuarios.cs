@@ -9,7 +9,7 @@ public partial class TBUsuarios
     public TBUsuarios() => 
         UsuarioIncEm = DateTime.Now;
 
-    public TBUsuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, TBPerfilacesso perfilAcesso, TBUnidades unidades) : this()
+    public TBUsuarios(int usuarioId, string usuarioNome, string usuarioSenha, int usuarioSenhaTemp, string usuarioEmail, string usuarioCpf, string usuarioStatus, int usuarioIncPor, DateTime usuarioIncEm, int? usuarioAltPor, DateTime? usuarioAltEm, short usuarioEmailTran, int perfilAcessoId, int unidadeId, TBPerfilaAcesso perfilAcesso, TBUnidades unidades) : this()
     {
         UsuarioId = usuarioId;
         UsuarioNome = usuarioNome;
@@ -58,7 +58,7 @@ public partial class TBUsuarios
 
     public int UnidadeId { get; set; }
 
-    public TBPerfilacesso PerfilAcesso { get; set; }
+    public TBPerfilaAcesso PerfilAcesso { get; set; }
 
     public TBUnidades Unidades { get; set; }
 

@@ -25,5 +25,5 @@ public partial class Tbhiststatusperfilacesso
 
     public virtual Tbfichastatus FichaSts { get; set; }
 
-    public virtual TBPerfilacesso PerfilAcesso { get; set; }
+    public virtual TBPerfilaAcesso PerfilAcesso { get; set; }
 }

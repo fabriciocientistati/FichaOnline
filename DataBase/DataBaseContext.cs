@@ -9,14 +9,14 @@ namespace FichaOnline.Data
         public DataBaseContext(DbContextOptions options): base(options) { }
 
         public DbSet<TBUsuarios> TBUSUARIOS { get; set; }
-        public DbSet<TBPerfilacesso> TBPERFILACESSO { get; set; }
+        public DbSet<TBPerfilaAcesso> TBPERFILACESSO { get; set; }
         public DbSet<TBUnidades> TBUNIDADES { get; set; }
         public DbSet<TBUnidadeTipos> TBUNIDADETIPOS { get; set; }
         public DbSet<TBPolo> TBPOLO { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TBPerfilacesso>()
+            modelBuilder.Entity<TBPerfilaAcesso>()
                 .HasKey(x => x.PerfilAcessoId);
 
             modelBuilder.Entity<TBUnidades>()
