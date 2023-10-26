@@ -53,7 +53,10 @@ public partial class TBCidade
     public int? CidAltPor { get; set; }
 
     public DateTime? CidAltEm { get; set; }
+
     public int EstId { get; set; }
+
     public TBEstado CidEstado { get; set; }
+
     public List<TBBairro> CidadeBairros { get; set; }
 }

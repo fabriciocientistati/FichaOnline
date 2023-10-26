@@ -7,6 +7,23 @@ namespace FichaOnline.Models;
 
 public partial class TBCategoria
 {
+    public TBCategoria() 
+    {
+        CatIncEm = DateTime.Now;
+    }
+    public TBCategoria(int catId, string catDesc, string catSts, int catIncPor, DateTime catIncEm, int? catAltPor, DateTime? catAltEm, List<TBFicha> categoriaFicha, List<TBCategoriaOpcoes> categoriaCategoriaOpcoes) : this()
+    {
+        CatId = catId;
+        CatDesc = catDesc;
+        CatSts = catSts;
+        CatIncPor = catIncPor;
+        CatIncEm = catIncEm;
+        CatAltPor = catAltPor;
+        CatAltEm = catAltEm;
+        CategoriaFicha = categoriaFicha;
+        CategoriaCategoriaOpcoes = categoriaCategoriaOpcoes;
+    }
+
     [Key]
     public int CatId { get; set; }
 

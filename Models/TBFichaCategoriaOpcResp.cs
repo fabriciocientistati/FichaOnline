@@ -4,6 +4,23 @@ namespace FichaOnline.Models
 {
     public class TBFichaCategoriaOpcResp
     {
+        public TBFichaCategoriaOpcResp() 
+        {
+            FichaCatOpcIncEm = DateTime.Now;
+        }
+        public TBFichaCategoriaOpcResp(int fichaCatOpcRespId, int catOpcId, int fichaId, int fichaCatOpcResIncPor, DateTime fichaCatOpcIncEm, int? fichaCatOpcRespAltPor, DateTime? fichaCatOpcRespAltEm, TBFicha catOpcRespFicha, TBCategoriaOpcoes catOpcRespCatOpc) : this()
+        {
+            FichaCatOpcRespId = fichaCatOpcRespId;
+            CatOpcId = catOpcId;
+            FichaId = fichaId;
+            FichaCatOpcResIncPor = fichaCatOpcResIncPor;
+            FichaCatOpcIncEm = fichaCatOpcIncEm;
+            FichaCatOpcRespAltPor = fichaCatOpcRespAltPor;
+            FichaCatOpcRespAltEm = fichaCatOpcRespAltEm;
+            CatOpcRespFicha = catOpcRespFicha;
+            CatOpcRespCatOpc = catOpcRespCatOpc;
+        }
+
         [Key]
         public int FichaCatOpcRespId { get; set; }
         public int CatOpcId { get; set; }

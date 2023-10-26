@@ -40,5 +40,6 @@ public partial class TBBairro
     public DateTime BairroIncEm { get; set; } = DateTime.Now;
 
     public DateTime? BairroAltEm { get; set; }
+
     public List<TBAluno> BairroAlunos { get; set; }
 }
