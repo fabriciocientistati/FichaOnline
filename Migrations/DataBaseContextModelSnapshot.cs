@@ -10,19 +10,128 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FichaOnline.Migrations
 {
-    [DbContext(typeof(DataBaseContext))]
+    [DbContext(typeof(ContextoDb))]
     partial class DataBaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FichaOnline.Models.TBPerfilacesso", b =>
+            modelBuilder.Entity("FichaOnline.Models.TBBairro", b =>
+                {
+                    b.Property<int>("BairroId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BairroId"));
+
+                    b.Property<DateTime?>("BairroAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("BairroAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("BairroIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("BairroIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BairroNome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CidadeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BairroId");
+
+                    b.HasIndex("CidadeId");
+
+                    b.ToTable("TBAIRRO");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
+                {
+                    b.Property<int>("CidId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CidId"));
+
+                    b.Property<DateTime?>("CidAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CidAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("CidCodIbge")
+                        .HasColumnType("bigint");
+
+                    b.Property<int?>("CidIdDistrito")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CidIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CidIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CidNom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CidNomDistrito")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CidTipo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EstId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CidId");
+
+                    b.HasIndex("EstId");
+
+                    b.ToTable("TBCIDADE");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBEstado", b =>
+                {
+                    b.Property<int>("EstId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EstId"));
+
+                    b.Property<DateTime?>("EstAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("EstAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("EstIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EstIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EstNom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstSgl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EstId");
+
+                    b.ToTable("TBESTADO");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBPerfilaAcesso", b =>
                 {
                     b.Property<int>("PerfilAcessoId")
                         .ValueGeneratedOnAdd()
@@ -239,16 +348,38 @@ namespace FichaOnline.Migrations
                     b.ToTable("TBUSUARIOS");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBBairro", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBCidade", "BairroCidade")
+                        .WithMany("CidadeBairros")
+                        .HasForeignKey("CidadeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BairroCidade");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBEstado", "CidEstado")
+                        .WithMany("EstadoCidades")
+                        .HasForeignKey("EstId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CidEstado");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBUnidades", b =>
                 {
                     b.HasOne("FichaOnline.Models.TBPolo", "Polo")
-                        .WithMany("Unidades")
+                        .WithMany("UnidadePolos")
                         .HasForeignKey("PoloId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBUnidadeTipos", "TiposUnidade")
-                        .WithMany("Unidade")
+                        .WithMany("UnidadeUnidadeTipos")
                         .HasForeignKey("UnidadesTpoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -260,14 +391,14 @@ namespace FichaOnline.Migrations
 
             modelBuilder.Entity("FichaOnline.Models.TBUsuarios", b =>
                 {
-                    b.HasOne("FichaOnline.Models.TBPerfilacesso", "PerfilAcesso")
+                    b.HasOne("FichaOnline.Models.TBPerfilaAcesso", "PerfilAcesso")
                         .WithMany("Usuarios")
                         .HasForeignKey("PerfilAcessoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBUnidades", "Unidades")
-                        .WithMany("Usuarios")
+                        .WithMany("UnidadeUsuarios")
                         .HasForeignKey("UnidadeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -277,24 +408,34 @@ namespace FichaOnline.Migrations
                     b.Navigation("Unidades");
                 });
 
-            modelBuilder.Entity("FichaOnline.Models.TBPerfilacesso", b =>
+            modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
+                {
+                    b.Navigation("CidadeBairros");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBEstado", b =>
+                {
+                    b.Navigation("EstadoCidades");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBPerfilaAcesso", b =>
                 {
                     b.Navigation("Usuarios");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBPolo", b =>
                 {
-                    b.Navigation("Unidades");
+                    b.Navigation("UnidadePolos");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBUnidadeTipos", b =>
                 {
-                    b.Navigation("Unidade");
+                    b.Navigation("UnidadeUnidadeTipos");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBUnidades", b =>
                 {
-                    b.Navigation("Usuarios");
+                    b.Navigation("UnidadeUsuarios");
                 });
 #pragma warning restore 612, 618
         }

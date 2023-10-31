@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FichaOnline.Migrations
 {
-    [DbContext(typeof(DataBaseContext))]
+    [DbContext(typeof(ContextoDb))]
     [Migration("20231010211118_Criacao-tabelas-usuario")]
     partial class Criacaotabelasusuario
     {

@@ -13,11 +13,10 @@ public partial class TBCidade
         CidIncEm = DateTime.Now;
     }
 
-    public TBCidade(int cidId, string cidNom, string cidEstNom, long? cidCodIbge, int? cidTipo, int? cidIdDistrito, string cidNomDistrito, int cidIncPor, DateTime cidIncEm, int? cidAltPor, DateTime? cidAltEm, int estId, TBEstado cidEstado, List<TBBairro> cidadeBairros) : this()
+    public TBCidade(int cidId, string cidNom, long? cidCodIbge, int? cidTipo, int? cidIdDistrito, string cidNomDistrito, int cidIncPor, DateTime cidIncEm, int? cidAltPor, DateTime? cidAltEm, int estId, TBEstado cidEstado, List<TBBairro> cidadeBairros) : this()
     {
         CidId = cidId;
         CidNom = cidNom;
-        CidEstNom = cidEstNom;
         CidCodIbge = cidCodIbge;
         CidTipo = cidTipo;
         CidIdDistrito = cidIdDistrito;
@@ -35,8 +34,6 @@ public partial class TBCidade
     public int CidId { get; set; }
 
     public string CidNom { get; set; }
-
-    public string CidEstNom { get; set; }
 
     public long? CidCodIbge { get; set; }
 

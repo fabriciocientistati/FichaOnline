@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.TBBairro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroCidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroCidade.CidNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BairroId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BairroId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BairroId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

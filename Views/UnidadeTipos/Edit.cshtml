@@ -1,0 +1,64 @@
+﻿@model FichaOnline.Models.TBUnidadeTipos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TBUnidadeTipos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UnidadeTpoId" />
+            <div class="form-group">
+                <label asp-for="UnidadeTpoDsc" class="control-label"></label>
+                <input asp-for="UnidadeTpoDsc" class="form-control" />
+                <span asp-validation-for="UnidadeTpoDsc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeSgl" class="control-label"></label>
+                <input asp-for="UnidadeSgl" class="form-control" />
+                <span asp-validation-for="UnidadeSgl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeTipo" class="control-label"></label>
+                <input asp-for="UnidadeTipo" class="form-control" />
+                <span asp-validation-for="UnidadeTipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeTpoIncPor" class="control-label"></label>
+                <input asp-for="UnidadeTpoIncPor" class="form-control" />
+                <span asp-validation-for="UnidadeTpoIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeTpoIncEm" class="control-label"></label>
+                <input asp-for="UnidadeTpoIncEm" class="form-control" />
+                <span asp-validation-for="UnidadeTpoIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeTpoAltPor" class="control-label"></label>
+                <input asp-for="UnidadeTpoAltPor" class="form-control" />
+                <span asp-validation-for="UnidadeTpoAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeTpoAltEm" class="control-label"></label>
+                <input asp-for="UnidadeTpoAltEm" class="form-control" />
+                <span asp-validation-for="UnidadeTpoAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

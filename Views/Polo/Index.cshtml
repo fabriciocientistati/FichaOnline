@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.TBPolo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoloAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoloAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PoloId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PoloId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PoloId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

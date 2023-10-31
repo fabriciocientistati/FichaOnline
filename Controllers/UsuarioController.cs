@@ -10,10 +10,10 @@ namespace FichaOnline.Controllers
 {
     public class UsuarioController : Controller
     {
-        private readonly DataBaseContext _db;
+        private readonly ContextoDb _db;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public UsuarioController(DataBaseContext context, UserManager<IdentityUser> userManager)
+        public UsuarioController(ContextoDb context, UserManager<IdentityUser> userManager)
         {
             _db = context;
             _userManager = userManager;

@@ -6,12 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<DataBaseContext>(options => 
+builder.Services.AddDbContext<ContextoDb>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<DataBaseContext>()
+    .AddEntityFrameworkStores<ContextoDb>()
     .AddDefaultTokenProviders();
 
 var app = builder.Build();

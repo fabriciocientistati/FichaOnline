@@ -12,9 +12,9 @@ namespace FichaOnline.Controllers
 {
     public class PerfilController : Controller
     {
-        private readonly DataBaseContext _context;
+        private readonly ContextoDb _context;
 
-        public PerfilController(DataBaseContext context)
+        public PerfilController(ContextoDb context)
         {
             _context = context;
         }

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<FichaOnline.Models.TBUnidadeTipos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTpoDsc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeSgl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTpoIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTpoIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTpoAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeTpoAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTpoDsc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeSgl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTpoIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTpoIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTpoAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeTpoAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UnidadeTpoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UnidadeTpoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UnidadeTpoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

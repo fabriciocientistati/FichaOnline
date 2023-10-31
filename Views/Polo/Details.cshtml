@@ -1,0 +1,54 @@
+﻿@model FichaOnline.Models.TBPolo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TBPolo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloIncPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloIncPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloIncEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloIncEm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloAltPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloAltPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloAltEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloAltEm)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PoloId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

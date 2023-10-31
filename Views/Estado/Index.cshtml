@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.TBEstado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EstSgl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstNom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstSgl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EstId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EstId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EstId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

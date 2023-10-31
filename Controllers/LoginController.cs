@@ -9,11 +9,11 @@ namespace FichaOnline.Controllers
 {
     public class LoginController : Controller
     {
-        public readonly DataBaseContext _db;
+        public readonly ContextoDb _db;
         public readonly UserManager<IdentityUser> _userManager;
         public readonly SignInManager<IdentityUser> _signInManager;
 
-        public LoginController(DataBaseContext db, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public LoginController(ContextoDb db, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _db = db;
             _userManager = userManager;

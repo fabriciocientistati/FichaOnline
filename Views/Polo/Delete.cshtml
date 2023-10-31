@@ -1,0 +1,57 @@
+﻿@model FichaOnline.Models.TBPolo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TBPolo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloIncPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloIncPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloIncEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloIncEm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloAltPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloAltPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PoloAltEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoloAltEm)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PoloId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

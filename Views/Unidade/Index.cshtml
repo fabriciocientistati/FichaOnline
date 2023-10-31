@@ -1,0 +1,125 @@
+﻿@model IEnumerable<FichaOnline.Models.TBUnidades>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeDDD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeFone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeCEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeEndNmr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeEndLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeEndComp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnidadeAltEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TiposUnidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Polo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeDDD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeFone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeCEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeEndNmr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeEndLog)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeEndComp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeAltEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TiposUnidade.UnidadeTpoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Polo.PoloId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UnidadeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UnidadeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UnidadeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

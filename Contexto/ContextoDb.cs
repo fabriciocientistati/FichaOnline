@@ -4,15 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FichaOnline.Data
 {
-    public class DataBaseContext : DbContext
+    public class ContextoDb : DbContext
     {
-        public DataBaseContext(DbContextOptions options): base(options) { }
+        public ContextoDb(DbContextOptions options): base(options) { }
 
         public DbSet<TBUsuarios> TBUSUARIOS { get; set; }
         public DbSet<TBPerfilaAcesso> TBPERFILACESSO { get; set; }
         public DbSet<TBUnidades> TBUNIDADES { get; set; }
         public DbSet<TBUnidadeTipos> TBUNIDADETIPOS { get; set; }
         public DbSet<TBPolo> TBPOLO { get; set; }
+        public DbSet<TBBairro> TBAIRRO { get; set; }
+        public DbSet<TBCidade> TBCIDADE { get; set; }
+        public DbSet<TBEstado> TBESTADO { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +33,25 @@ namespace FichaOnline.Data
 
             modelBuilder.Entity<TBUnidadeTipos>()
                 .HasKey(x => x.UnidadeTpoId);
+
+            modelBuilder.Entity<TBBairro>()
+                .HasKey(x => x.BairroId);
+
+            modelBuilder.Entity<TBCidade>()
+                .HasKey(x => x.CidId);
+
+            modelBuilder.Entity<TBEstado>()
+                .HasKey(x => x.EstId);
+
+            modelBuilder.Entity<TBCidade>()
+                .HasOne(cid => cid.CidEstado)
+                .WithMany(est => est.EstadoCidades)
+                .HasForeignKey(cid => cid.EstId);
+
+            modelBuilder.Entity<TBBairro>()
+                .HasOne(bai => bai.BairroCidade)
+                .WithMany(cid => cid.CidadeBairros)
+                .HasForeignKey(bai => bai.CidadeId);
 
             modelBuilder.Entity<TBUnidades>()
                 .HasMany(un => un.UnidadeUsuarios)

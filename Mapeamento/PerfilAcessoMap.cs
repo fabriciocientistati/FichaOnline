@@ -9,6 +9,7 @@ namespace FichaOnline.Mappings
         public void Configure(EntityTypeBuilder<TBPerfilaAcesso> builder)
         {
             builder.ToTable("TBPERFILACESSO");
+            
         }
     }
 }

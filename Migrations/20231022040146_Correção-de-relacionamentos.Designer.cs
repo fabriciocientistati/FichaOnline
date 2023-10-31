@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FichaOnline.Migrations
 {
-    [DbContext(typeof(DataBaseContext))]
+    [DbContext(typeof(ContextoDb))]
     [Migration("20231022040146_Correção-de-relacionamentos")]
     partial class Correçãoderelacionamentos
     {

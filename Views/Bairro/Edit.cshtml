@@ -1,0 +1,59 @@
+﻿@model FichaOnline.Models.TBBairro
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TBBairro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BairroId" />
+            <div class="form-group">
+                <label asp-for="BairroNome" class="control-label"></label>
+                <input asp-for="BairroNome" class="form-control" />
+                <span asp-validation-for="BairroNome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BairroIncPor" class="control-label"></label>
+                <input asp-for="BairroIncPor" class="form-control" />
+                <span asp-validation-for="BairroIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BairroAltPor" class="control-label"></label>
+                <input asp-for="BairroAltPor" class="form-control" />
+                <span asp-validation-for="BairroAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CidadeId" class="control-label"></label>
+                <select asp-for="CidadeId" class="form-control" asp-items="ViewBag.CidadeId"></select>
+                <span asp-validation-for="CidadeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BairroIncEm" class="control-label"></label>
+                <input asp-for="BairroIncEm" class="form-control" />
+                <span asp-validation-for="BairroIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BairroAltEm" class="control-label"></label>
+                <input asp-for="BairroAltEm" class="form-control" />
+                <span asp-validation-for="BairroAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
