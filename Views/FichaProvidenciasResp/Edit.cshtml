@@ -1,0 +1,94 @@
+﻿@model FichaOnline.Models.TBFichaProvidenciasResp
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TBFichaProvidenciasResp</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FichaProvRespId" />
+            <div class="form-group">
+                <label asp-for="FichaId" class="control-label"></label>
+                <select asp-for="FichaId" class="form-control" asp-items="ViewBag.FichaId"></select>
+                <span asp-validation-for="FichaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaProvRespIncPor" class="control-label"></label>
+                <input asp-for="FichaProvRespIncPor" class="form-control" />
+                <span asp-validation-for="FichaProvRespIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaProvRespIncEm" class="control-label"></label>
+                <input asp-for="FichaProvRespIncEm" class="form-control" />
+                <span asp-validation-for="FichaProvRespIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaProvRespAltPor" class="control-label"></label>
+                <input asp-for="FichaProvRespAltPor" class="form-control" />
+                <span asp-validation-for="FichaProvRespAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaprovRespAltEm" class="control-label"></label>
+                <input asp-for="FichaprovRespAltEm" class="form-control" />
+                <span asp-validation-for="FichaprovRespAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaDtaComunicRespons" class="control-label"></label>
+                <input asp-for="FichaDtaComunicRespons" class="form-control" />
+                <span asp-validation-for="FichaDtaComunicRespons" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaMeioComunic" class="control-label"></label>
+                <input asp-for="FichaMeioComunic" class="form-control" />
+                <span asp-validation-for="FichaMeioComunic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaPorQuemUsuariorId" class="control-label"></label>
+                <input asp-for="FichaPorQuemUsuariorId" class="form-control" />
+                <span asp-validation-for="FichaPorQuemUsuariorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaPraQuemUsuariorId" class="control-label"></label>
+                <input asp-for="FichaPraQuemUsuariorId" class="form-control" />
+                <span asp-validation-for="FichaPraQuemUsuariorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaProcedimentoUnidade" class="control-label"></label>
+                <input asp-for="FichaProcedimentoUnidade" class="form-control" />
+                <span asp-validation-for="FichaProcedimentoUnidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaRecebidoEm" class="control-label"></label>
+                <input asp-for="FichaRecebidoEm" class="form-control" />
+                <span asp-validation-for="FichaRecebidoEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaDataTramitacao" class="control-label"></label>
+                <input asp-for="FichaDataTramitacao" class="form-control" />
+                <span asp-validation-for="FichaDataTramitacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaDefineRetorno" class="control-label"></label>
+                <input asp-for="FichaDefineRetorno" class="form-control" />
+                <span asp-validation-for="FichaDefineRetorno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

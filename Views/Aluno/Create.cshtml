@@ -1,0 +1,173 @@
+﻿@model FichaOnline.Models.TBAluno
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TBAluno</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AluNom" class="control-label"></label>
+                <input asp-for="AluNom" class="form-control" />
+                <span asp-validation-for="AluNom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluNomSoc" class="control-label"></label>
+                <input asp-for="AluNomSoc" class="form-control" />
+                <span asp-validation-for="AluNomSoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluDtaNasc" class="control-label"></label>
+                <input asp-for="AluDtaNasc" class="form-control" />
+                <span asp-validation-for="AluDtaNasc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluCpf" class="control-label"></label>
+                <input asp-for="AluCpf" class="form-control" />
+                <span asp-validation-for="AluCpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluSexo" class="control-label"></label>
+                <input asp-for="AluSexo" class="form-control" />
+                <span asp-validation-for="AluSexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluFiliacao1" class="control-label"></label>
+                <input asp-for="AluFiliacao1" class="form-control" />
+                <span asp-validation-for="AluFiliacao1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluFiliacao2" class="control-label"></label>
+                <input asp-for="AluFiliacao2" class="form-control" />
+                <span asp-validation-for="AluFiliacao2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluFiliacao3" class="control-label"></label>
+                <input asp-for="AluFiliacao3" class="form-control" />
+                <span asp-validation-for="AluFiliacao3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluIdinep" class="control-label"></label>
+                <input asp-for="AluIdinep" class="form-control" />
+                <span asp-validation-for="AluIdinep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluRaca" class="control-label"></label>
+                <input asp-for="AluRaca" class="form-control" />
+                <span asp-validation-for="AluRaca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluEndLog" class="control-label"></label>
+                <input asp-for="AluEndLog" class="form-control" />
+                <span asp-validation-for="AluEndLog" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluEndNmrLog" class="control-label"></label>
+                <input asp-for="AluEndNmrLog" class="form-control" />
+                <span asp-validation-for="AluEndNmrLog" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluEndCmpLog" class="control-label"></label>
+                <input asp-for="AluEndCmpLog" class="form-control" />
+                <span asp-validation-for="AluEndCmpLog" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluEndBairro" class="control-label"></label>
+                <input asp-for="AluEndBairro" class="form-control" />
+                <span asp-validation-for="AluEndBairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluEndCep" class="control-label"></label>
+                <input asp-for="AluEndCep" class="form-control" />
+                <span asp-validation-for="AluEndCep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelResDdd" class="control-label"></label>
+                <input asp-for="AluTelResDdd" class="form-control" />
+                <span asp-validation-for="AluTelResDdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelRes" class="control-label"></label>
+                <input asp-for="AluTelRes" class="form-control" />
+                <span asp-validation-for="AluTelRes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelCelDdd" class="control-label"></label>
+                <input asp-for="AluTelCelDdd" class="form-control" />
+                <span asp-validation-for="AluTelCelDdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelCel" class="control-label"></label>
+                <input asp-for="AluTelCel" class="form-control" />
+                <span asp-validation-for="AluTelCel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelConDdd" class="control-label"></label>
+                <input asp-for="AluTelConDdd" class="form-control" />
+                <span asp-validation-for="AluTelConDdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluTelCon" class="control-label"></label>
+                <input asp-for="AluTelCon" class="form-control" />
+                <span asp-validation-for="AluTelCon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluObs" class="control-label"></label>
+                <input asp-for="AluObs" class="form-control" />
+                <span asp-validation-for="AluObs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluStatus" class="control-label"></label>
+                <input asp-for="AluStatus" class="form-control" />
+                <span asp-validation-for="AluStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluIncPor" class="control-label"></label>
+                <input asp-for="AluIncPor" class="form-control" />
+                <span asp-validation-for="AluIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluIncEm" class="control-label"></label>
+                <input asp-for="AluIncEm" class="form-control" />
+                <span asp-validation-for="AluIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluAltPor" class="control-label"></label>
+                <input asp-for="AluAltPor" class="form-control" />
+                <span asp-validation-for="AluAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluAltEm" class="control-label"></label>
+                <input asp-for="AluAltEm" class="form-control" />
+                <span asp-validation-for="AluAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BairroId" class="control-label"></label>
+                <input asp-for="BairroId" class="form-control" />
+                <span asp-validation-for="BairroId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GedAluCod" class="control-label"></label>
+                <input asp-for="GedAluCod" class="form-control" />
+                <span asp-validation-for="GedAluCod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

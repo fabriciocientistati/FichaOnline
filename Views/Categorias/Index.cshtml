@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.TBCategoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CatDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatSts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatSts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

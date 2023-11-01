@@ -22,6 +22,111 @@ namespace FichaOnline.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("FichaOnline.Models.TBAluno", b =>
+                {
+                    b.Property<int>("AluId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AluId"));
+
+                    b.Property<DateTime?>("AluAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("AluAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AluCpf")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("AluDtaNasc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AluEndBairro")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluEndCep")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluEndCmpLog")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluEndLog")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluEndNmrLog")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluFiliacao1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluFiliacao2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluFiliacao3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("AluIdinep")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("AluIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AluIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AluNom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluNomSoc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluObs")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluRaca")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluSexo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelCel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelCelDdd")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelCon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelConDdd")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelRes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AluTelResDdd")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("AlunoBairroBairroId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("BairroId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GedAluCod")
+                        .HasColumnType("int");
+
+                    b.HasKey("AluId");
+
+                    b.HasIndex("AlunoBairroBairroId");
+
+                    b.ToTable("TBALUNO");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBBairro", b =>
                 {
                     b.Property<int>("BairroId")
@@ -53,6 +158,74 @@ namespace FichaOnline.Migrations
                     b.HasIndex("CidadeId");
 
                     b.ToTable("TBAIRRO");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBCategoria", b =>
+                {
+                    b.Property<int>("CatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CatId"));
+
+                    b.Property<DateTime?>("CatAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CatAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CatDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CatIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CatIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CatSts")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CatId");
+
+                    b.ToTable("TBCATEGORIA");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBCategoriaOpcoes", b =>
+                {
+                    b.Property<int>("CatOpcId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CatOpcId"));
+
+                    b.Property<int>("CatId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CatOpcAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CatOpcAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CatOpcDesc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CatOpcIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CatOpcIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoriaCatId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CatOpcId");
+
+                    b.HasIndex("CategoriaCatId");
+
+                    b.ToTable("TBCATEGORIAOPCOES");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
@@ -129,6 +302,166 @@ namespace FichaOnline.Migrations
                     b.HasKey("EstId");
 
                     b.ToTable("TBESTADO");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFicha", b =>
+                {
+                    b.Property<int>("FichaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FichaId"));
+
+                    b.Property<int>("AluId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FichaAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("FichaAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FichaAlunoAluId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FichaAtualUnidadeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FichaCatId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FichaCategoriaCatId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FichaDtaFim")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FichaDtaIni")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FichaEscOrigemUnidadeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FichaIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FichaIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FichaNova")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FichaStsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("FichaId");
+
+                    b.HasIndex("FichaAlunoAluId");
+
+                    b.HasIndex("FichaCategoriaCatId");
+
+                    b.HasIndex("FichaEscOrigemUnidadeId");
+
+                    b.ToTable("TBFICHA");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFichaCategoriaOpcResp", b =>
+                {
+                    b.Property<int>("FichaCatOpcRespId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FichaCatOpcRespId"));
+
+                    b.Property<int>("CatOpcId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CatOpcRespCatOpcCatOpcId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CatOpcRespFichaFichaId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FichaCatOpcIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FichaCatOpcResIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FichaCatOpcRespAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("FichaCatOpcRespAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FichaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("FichaCatOpcRespId");
+
+                    b.HasIndex("CatOpcRespCatOpcCatOpcId");
+
+                    b.HasIndex("CatOpcRespFichaFichaId");
+
+                    b.ToTable("TBCATEGORIAOPCRESP");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFichaProvidenciasResp", b =>
+                {
+                    b.Property<int>("FichaProvRespId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FichaProvRespId"));
+
+                    b.Property<DateTime?>("FichaDataTramitacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FichaDefineRetorno")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("FichaDtaComunicRespons")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FichaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FichaMeioComunic")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FichaPorQuemUsuariorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FichaPraQuemUsuariorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FichaProcedimentoUnidade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FichaProvRespAltPor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FichaProvRespIncEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FichaProvRespIncPor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FichaRecebidoEm")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("FichaprovRespAltEm")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("FichaProvRespId");
+
+                    b.HasIndex("FichaId")
+                        .IsUnique();
+
+                    b.ToTable("TBFICHAPROVIDENCIASRESP");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBPerfilaAcesso", b =>
@@ -348,6 +681,15 @@ namespace FichaOnline.Migrations
                     b.ToTable("TBUSUARIOS");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBAluno", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBBairro", "AlunoBairro")
+                        .WithMany("BairroAlunos")
+                        .HasForeignKey("AlunoBairroBairroId");
+
+                    b.Navigation("AlunoBairro");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBBairro", b =>
                 {
                     b.HasOne("FichaOnline.Models.TBCidade", "BairroCidade")
@@ -359,6 +701,17 @@ namespace FichaOnline.Migrations
                     b.Navigation("BairroCidade");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBCategoriaOpcoes", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBCategoria", "Categoria")
+                        .WithMany("CategoriaCategoriaOpcoes")
+                        .HasForeignKey("CategoriaCatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
                 {
                     b.HasOne("FichaOnline.Models.TBEstado", "CidEstado")
@@ -368,6 +721,59 @@ namespace FichaOnline.Migrations
                         .IsRequired();
 
                     b.Navigation("CidEstado");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFicha", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBAluno", "FichaAluno")
+                        .WithMany("AlunoFicha")
+                        .HasForeignKey("FichaAlunoAluId");
+
+                    b.HasOne("FichaOnline.Models.TBCategoria", "FichaCategoria")
+                        .WithMany("CategoriaFicha")
+                        .HasForeignKey("FichaCategoriaCatId");
+
+                    b.HasOne("FichaOnline.Models.TBUnidades", "FichaEscOrigemUnidade")
+                        .WithMany()
+                        .HasForeignKey("FichaEscOrigemUnidadeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FichaAluno");
+
+                    b.Navigation("FichaCategoria");
+
+                    b.Navigation("FichaEscOrigemUnidade");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFichaCategoriaOpcResp", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBCategoriaOpcoes", "CatOpcRespCatOpc")
+                        .WithMany()
+                        .HasForeignKey("CatOpcRespCatOpcCatOpcId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FichaOnline.Models.TBFicha", "CatOpcRespFicha")
+                        .WithMany()
+                        .HasForeignKey("CatOpcRespFichaFichaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CatOpcRespCatOpc");
+
+                    b.Navigation("CatOpcRespFicha");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFichaProvidenciasResp", b =>
+                {
+                    b.HasOne("FichaOnline.Models.TBFicha", "FichaProvFicha")
+                        .WithOne("FichaFichaProv")
+                        .HasForeignKey("FichaOnline.Models.TBFichaProvidenciasResp", "FichaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FichaProvFicha");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBUnidades", b =>
@@ -408,6 +814,23 @@ namespace FichaOnline.Migrations
                     b.Navigation("Unidades");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBAluno", b =>
+                {
+                    b.Navigation("AlunoFicha");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBBairro", b =>
+                {
+                    b.Navigation("BairroAlunos");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBCategoria", b =>
+                {
+                    b.Navigation("CategoriaCategoriaOpcoes");
+
+                    b.Navigation("CategoriaFicha");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
                 {
                     b.Navigation("CidadeBairros");
@@ -416,6 +839,11 @@ namespace FichaOnline.Migrations
             modelBuilder.Entity("FichaOnline.Models.TBEstado", b =>
                 {
                     b.Navigation("EstadoCidades");
+                });
+
+            modelBuilder.Entity("FichaOnline.Models.TBFicha", b =>
+                {
+                    b.Navigation("FichaFichaProv");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBPerfilaAcesso", b =>

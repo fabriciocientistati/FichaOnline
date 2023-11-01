@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FichaOnline.Models.TBCategoriaOpcoes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatOpcDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatOpcIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatOpcIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatOpcAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatOpcAltEm)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatOpcDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatOpcIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatOpcIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatOpcAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatOpcAltEm)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CatOpcId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CatOpcId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CatOpcId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

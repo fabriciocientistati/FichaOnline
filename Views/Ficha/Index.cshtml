@@ -1,0 +1,101 @@
+﻿@model IEnumerable<FichaOnline.Models.TBFicha>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaCatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaStsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaAtualUnidadeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaNova)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaDtaIni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaDtaFim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaAltEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaEscOrigemUnidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaCatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaStsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaAtualUnidadeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaNova)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaDtaIni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaDtaFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaAltEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaEscOrigemUnidade.UnidadeId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FichaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FichaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FichaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

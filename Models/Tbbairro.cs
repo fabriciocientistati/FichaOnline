@@ -11,7 +11,7 @@ public partial class TBBairro
     {
         BairroIncEm = DateTime.Now;
     }
-    public TBBairro(int bairroId, string bairroNome, int bairroIncPor, int? bairroAltPor, int cidadeId, TBCidade bairroCidade, DateTime bairroIncEm, DateTime? bairroAltEm) : this()
+    public TBBairro(int bairroId, string bairroNome, int bairroIncPor, int? bairroAltPor, int cidadeId, TBCidade bairroCidade, DateTime bairroIncEm, DateTime? bairroAltEm, List<TBAluno> bairroAlunos) : this()
     {
         BairroId = bairroId;
         BairroNome = bairroNome;
@@ -21,7 +21,7 @@ public partial class TBBairro
         BairroCidade = bairroCidade;
         BairroIncEm = bairroIncEm;
         BairroAltEm = bairroAltEm;
-        //BairroAlunos = bairroAlunos;
+        BairroAlunos = bairroAlunos;
     }
 
     [Key]
@@ -40,6 +40,5 @@ public partial class TBBairro
     public DateTime BairroIncEm { get; set; } = DateTime.Now;
 
     public DateTime? BairroAltEm { get; set; }
-
-    //public List<TBAluno> BairroAlunos { get; set; }
+    public List<TBAluno> BairroAlunos { get; set; }
 }

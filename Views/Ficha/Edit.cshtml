@@ -1,0 +1,89 @@
+﻿@model FichaOnline.Models.TBFicha
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TBFicha</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FichaId" />
+            <div class="form-group">
+                <label asp-for="FichaCatId" class="control-label"></label>
+                <input asp-for="FichaCatId" class="form-control" />
+                <span asp-validation-for="FichaCatId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaStsId" class="control-label"></label>
+                <input asp-for="FichaStsId" class="form-control" />
+                <span asp-validation-for="FichaStsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaAtualUnidadeId" class="control-label"></label>
+                <input asp-for="FichaAtualUnidadeId" class="form-control" />
+                <span asp-validation-for="FichaAtualUnidadeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaNova" class="control-label"></label>
+                <input asp-for="FichaNova" class="form-control" />
+                <span asp-validation-for="FichaNova" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AluId" class="control-label"></label>
+                <input asp-for="AluId" class="form-control" />
+                <span asp-validation-for="AluId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaEscOrigemUnidadeId" class="control-label"></label>
+                <select asp-for="FichaEscOrigemUnidadeId" class="form-control" asp-items="ViewBag.FichaEscOrigemUnidadeId"></select>
+                <span asp-validation-for="FichaEscOrigemUnidadeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaDtaIni" class="control-label"></label>
+                <input asp-for="FichaDtaIni" class="form-control" />
+                <span asp-validation-for="FichaDtaIni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaDtaFim" class="control-label"></label>
+                <input asp-for="FichaDtaFim" class="form-control" />
+                <span asp-validation-for="FichaDtaFim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaIncPor" class="control-label"></label>
+                <input asp-for="FichaIncPor" class="form-control" />
+                <span asp-validation-for="FichaIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaIncEm" class="control-label"></label>
+                <input asp-for="FichaIncEm" class="form-control" />
+                <span asp-validation-for="FichaIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaAltPor" class="control-label"></label>
+                <input asp-for="FichaAltPor" class="form-control" />
+                <span asp-validation-for="FichaAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaAltEm" class="control-label"></label>
+                <input asp-for="FichaAltEm" class="form-control" />
+                <span asp-validation-for="FichaAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

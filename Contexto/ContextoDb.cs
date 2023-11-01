@@ -16,9 +16,29 @@ namespace FichaOnline.Data
         public DbSet<TBBairro> TBAIRRO { get; set; }
         public DbSet<TBCidade> TBCIDADE { get; set; }
         public DbSet<TBEstado> TBESTADO { get; set; }
-
+        public DbSet<TBFicha> TBFICHA { get; set; }
+        public DbSet<TBAluno> TBALUNO { get; set; }
+        public DbSet<TBCategoria> TBCATEGORIA { get; set; }
+        public DbSet<TBCategoriaOpcoes> TBCATEGORIAOPCOES { get; set; }
+        public DbSet<TBFichaCategoriaOpcResp> TBCATEGORIAOPCRESP { get; set; }
+        public DbSet<TBFichaProvidenciasResp> TBFICHAPROVIDENCIASRESP { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TBFicha>()
+                .HasKey(x => x.FichaId);
+
+            modelBuilder.Entity<TBAluno>()
+                .HasKey(x => x.AluId);
+
+            modelBuilder.Entity<TBCategoria>()
+                .HasKey(x => x.CatId);
+
+            modelBuilder.Entity<TBFichaCategoriaOpcResp>()
+                .HasKey(x => x.CatOpcId);
+
+            modelBuilder.Entity<TBFichaCategoriaOpcResp>()
+                .HasKey(x => x.FichaCatOpcRespId);
+
             modelBuilder.Entity<TBPerfilaAcesso>()
                 .HasKey(x => x.PerfilAcessoId);
 
@@ -42,6 +62,11 @@ namespace FichaOnline.Data
 
             modelBuilder.Entity<TBEstado>()
                 .HasKey(x => x.EstId);
+
+            modelBuilder.Entity<TBFicha>()
+                .HasOne(f => f.FichaFichaProv)
+                .WithOne(fp => fp.FichaProvFicha)
+                .HasForeignKey<TBFichaProvidenciasResp>(fp => fp.FichaId);
 
             modelBuilder.Entity<TBCidade>()
                 .HasOne(cid => cid.CidEstado)

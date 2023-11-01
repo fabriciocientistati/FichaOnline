@@ -1,0 +1,333 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FichaOnline
+build_property.RootNamespace = FichaOnline
+build_property.ProjectDir = C:\Desenvolvimento\Repositorio\FichaOnline\FichaOnline\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Desenvolvimento\Repositorio\FichaOnline\FichaOnline
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Aluno/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Aluno/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Aluno/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Aluno/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Aluno/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Bairro/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpcnJvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Bairro/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpcnJvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Bairro/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpcnJvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Bairro/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpcnJvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Bairro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpcnJvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/CategoriaOpcoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhT3Bjb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/CategoriaOpcoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhT3Bjb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/CategoriaOpcoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhT3Bjb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/CategoriaOpcoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhT3Bjb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/CategoriaOpcoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhT3Bjb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Categorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Cidade/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Cidade/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Cidade/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Cidade/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Cidade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Estado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Estado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Estado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Estado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Estado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaCategoriaOpcResp/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFDYXRlZ29yaWFPcGNSZXNwXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaCategoriaOpcResp/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFDYXRlZ29yaWFPcGNSZXNwXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaCategoriaOpcResp/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFDYXRlZ29yaWFPcGNSZXNwXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaCategoriaOpcResp/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFDYXRlZ29yaWFPcGNSZXNwXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaCategoriaOpcResp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFDYXRlZ29yaWFPcGNSZXNwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaProvidenciasResp/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFQcm92aWRlbmNpYXNSZXNwXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaProvidenciasResp/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFQcm92aWRlbmNpYXNSZXNwXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaProvidenciasResp/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFQcm92aWRlbmNpYXNSZXNwXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaProvidenciasResp/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFQcm92aWRlbmNpYXNSZXNwXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/FichaProvidenciasResp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFQcm92aWRlbmNpYXNSZXNwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Ficha/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Ficha/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Ficha/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Ficha/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Ficha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Perfil/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Perfil/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Perfil/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Perfil/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Perfil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Polo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Polo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Polo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Polo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Polo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/UnidadeTipos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVRpcG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/UnidadeTipos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVRpcG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/UnidadeTipos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVRpcG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/UnidadeTipos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVRpcG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/UnidadeTipos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVRpcG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Unidade/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Unidade/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Unidade/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Unidade/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Unidade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Usuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Usuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Usuario/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Usuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desenvolvimento/Repositorio/FichaOnline/FichaOnline/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ufm0zcojj7

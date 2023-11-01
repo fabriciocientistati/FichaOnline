@@ -1,0 +1,203 @@
+﻿@model IEnumerable<FichaOnline.Models.TBAluno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AluNom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluNomSoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluDtaNasc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluCpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluSexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluFiliacao1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluFiliacao2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluFiliacao3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluIdinep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluRaca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluEndLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluEndNmrLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluEndCmpLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluEndBairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluEndCep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelResDdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelRes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelCelDdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelCel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelConDdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluTelCon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluObs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluAltEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GedAluCod)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluNomSoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluDtaNasc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluCpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluSexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluFiliacao1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluFiliacao2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluFiliacao3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluIdinep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluRaca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluEndLog)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluEndNmrLog)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluEndCmpLog)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluEndBairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluEndCep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelResDdd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelRes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelCelDdd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelCel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelConDdd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluTelCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluObs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluAltEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GedAluCod)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AluId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AluId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AluId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
