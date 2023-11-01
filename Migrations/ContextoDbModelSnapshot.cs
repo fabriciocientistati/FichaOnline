@@ -4,7 +4,6 @@ using FichaOnline.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,11 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FichaOnline.Migrations
 {
     [DbContext(typeof(ContextoDb))]
-    [Migration("20231101000718_Relacionamento-Fichas2")]
-    partial class RelacionamentoFichas2
+    partial class ContextoDbModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -160,7 +157,7 @@ namespace FichaOnline.Migrations
 
                     b.HasIndex("CidadeId");
 
-                    b.ToTable("TBAIRRO");
+                    b.ToTable("TBBAIRRO");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBCategoria", b =>

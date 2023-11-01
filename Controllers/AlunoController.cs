@@ -48,7 +48,8 @@ namespace FichaOnline.Controllers
         // GET: Aluno/Create
         public IActionResult Create()
         {
-            return View();
+            ViewData["BairroId"] = new SelectList(_context.TBBAIRRO, "BairroId", "BairroNome");
+                return View();
         }
 
         // POST: Aluno/Create

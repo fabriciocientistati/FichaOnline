@@ -45,10 +45,13 @@ namespace FichaOnline.Controllers
             return View(tBCategoriaOpcoes);
         }
 
-        // GET: CategoriaOpcoes/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id) //Carrega o ID que vem por parametro
         {
-            return View();
+ 
+                //ViewData["CatId"] = new SelectList(_context.TBCATEGORIA, "CatId", "CatDesc");
+                ViewBag.CatId = new SelectList(_context.TBCATEGORIA, "CatId", "CatDesc", id);
+                return View();
+
         }
 
         // POST: CategoriaOpcoes/Create
@@ -56,7 +59,7 @@ namespace FichaOnline.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CatOpcId,CatId,CatOpcDesc,CatOpcIncPor,CatOpcIncEm,CatOpcAltPor,CatOpcAltEm")] TBCategoriaOpcoes tBCategoriaOpcoes)
+        public async Task<IActionResult> Create([Bind("CatId,CatOpcDesc,CatOpcIncPor,CatOpcIncEm,CatOpcAltPor,CatOpcAltEm")] TBCategoriaOpcoes tBCategoriaOpcoes)
         {
             if (ModelState.IsValid)
             {

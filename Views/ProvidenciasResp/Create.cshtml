@@ -13,10 +13,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FichaId" class="control-label"></label>
-                <select asp-for="FichaId" class ="form-control" asp-items="ViewBag.FichaId"></select>
-            </div>
-            <div class="form-group">
                 <label asp-for="FichaProvRespIncPor" class="control-label"></label>
                 <input asp-for="FichaProvRespIncPor" class="form-control" />
                 <span asp-validation-for="FichaProvRespIncPor" class="text-danger"></span>

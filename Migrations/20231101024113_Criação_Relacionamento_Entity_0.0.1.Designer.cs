@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FichaOnline.Migrations
 {
     [DbContext(typeof(ContextoDb))]
-    [Migration("20231101000508_Relacionamento-Fichas")]
-    partial class RelacionamentoFichas
+    [Migration("20231101024113_Criação_Relacionamento_Entity_0.0.1")]
+    partial class Criação_Relacionamento_Entity_001
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -160,7 +160,7 @@ namespace FichaOnline.Migrations
 
                     b.HasIndex("CidadeId");
 
-                    b.ToTable("TBAIRRO");
+                    b.ToTable("TBBAIRRO");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBCategoria", b =>
@@ -464,7 +464,7 @@ namespace FichaOnline.Migrations
                     b.HasIndex("FichaId")
                         .IsUnique();
 
-                    b.ToTable("TBFichaProvidenciasResp");
+                    b.ToTable("TBFICHAPROVIDENCIASRESP");
                 });
 
             modelBuilder.Entity("FichaOnline.Models.TBPerfilaAcesso", b =>

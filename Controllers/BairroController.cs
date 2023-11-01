@@ -22,19 +22,19 @@ namespace FichaOnline.Controllers
         // GET: Bairro
         public async Task<IActionResult> Index()
         {
-            var contextoDb = _context.TBAIRRO.Include(t => t.BairroCidade);
+            var contextoDb = _context.TBBAIRRO.Include(t => t.BairroCidade);
             return View(await contextoDb.ToListAsync());
         }
 
         // GET: Bairro/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.TBAIRRO == null)
+            if (id == null || _context.TBBAIRRO == null)
             {
                 return NotFound();
             }
 
-            var tBBairro = await _context.TBAIRRO
+            var tBBairro = await _context.TBBAIRRO
                 .Include(t => t.BairroCidade)
                 .FirstOrDefaultAsync(m => m.BairroId == id);
             if (tBBairro == null)
@@ -72,12 +72,12 @@ namespace FichaOnline.Controllers
         // GET: Bairro/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.TBAIRRO == null)
+            if (id == null || _context.TBBAIRRO == null)
             {
                 return NotFound();
             }
 
-            var tBBairro = await _context.TBAIRRO.FindAsync(id);
+            var tBBairro = await _context.TBBAIRRO.FindAsync(id);
             if (tBBairro == null)
             {
                 return NotFound();
@@ -125,12 +125,12 @@ namespace FichaOnline.Controllers
         // GET: Bairro/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.TBAIRRO == null)
+            if (id == null || _context.TBBAIRRO == null)
             {
                 return NotFound();
             }
 
-            var tBBairro = await _context.TBAIRRO
+            var tBBairro = await _context.TBBAIRRO
                 .Include(t => t.BairroCidade)
                 .FirstOrDefaultAsync(m => m.BairroId == id);
             if (tBBairro == null)
@@ -146,14 +146,14 @@ namespace FichaOnline.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.TBAIRRO == null)
+            if (_context.TBBAIRRO == null)
             {
                 return Problem("Entity set 'ContextoDb.TBAIRRO'  is null.");
             }
-            var tBBairro = await _context.TBAIRRO.FindAsync(id);
+            var tBBairro = await _context.TBBAIRRO.FindAsync(id);
             if (tBBairro != null)
             {
-                _context.TBAIRRO.Remove(tBBairro);
+                _context.TBBAIRRO.Remove(tBBairro);
             }
             
             await _context.SaveChangesAsync();
@@ -162,7 +162,7 @@ namespace FichaOnline.Controllers
 
         private bool TBBairroExists(int id)
         {
-          return (_context.TBAIRRO?.Any(e => e.BairroId == id)).GetValueOrDefault();
+          return (_context.TBBAIRRO?.Any(e => e.BairroId == id)).GetValueOrDefault();
         }
     }
 }

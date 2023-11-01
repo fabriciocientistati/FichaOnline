@@ -13,7 +13,7 @@ namespace FichaOnline.Data
         public DbSet<TBUnidades> TBUNIDADES { get; set; }
         public DbSet<TBUnidadeTipos> TBUNIDADETIPOS { get; set; }
         public DbSet<TBPolo> TBPOLO { get; set; }
-        public DbSet<TBBairro> TBAIRRO { get; set; }
+        public DbSet<TBBairro> TBBAIRRO { get; set; }
         public DbSet<TBCidade> TBCIDADE { get; set; }
         public DbSet<TBEstado> TBESTADO { get; set; }
         public DbSet<TBFicha> TBFICHA { get; set; }
@@ -33,11 +33,14 @@ namespace FichaOnline.Data
             modelBuilder.Entity<TBCategoria>()
                 .HasKey(x => x.CatId);
 
-            modelBuilder.Entity<TBFichaCategoriaOpcResp>()
+            modelBuilder.Entity<TBCategoriaOpcoes>()
                 .HasKey(x => x.CatOpcId);
 
             modelBuilder.Entity<TBFichaCategoriaOpcResp>()
                 .HasKey(x => x.FichaCatOpcRespId);
+
+            modelBuilder.Entity<TBFichaProvidenciasResp>()
+                .HasKey(x => x.FichaProvRespId);
 
             modelBuilder.Entity<TBPerfilaAcesso>()
                 .HasKey(x => x.PerfilAcessoId);

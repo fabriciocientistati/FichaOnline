@@ -50,6 +50,7 @@ namespace FichaOnline.Controllers
         {
             ViewData["FichaEscOrigemUnidadeId"] = new SelectList(_context.TBUNIDADES, "UnidadeId", "UnidadeDesc");
             ViewData["AluId"] = new SelectList(_context.TBALUNO, "AluId", "AluNom");
+            ViewData["CatId"] = new SelectList(_context.TBCATEGORIA, "CatId", "CatDesc");
             return View();
         }
 
