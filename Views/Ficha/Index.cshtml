@@ -91,7 +91,7 @@
                 @Html.DisplayFor(modelItem => item.FichaEscOrigemUnidade.UnidadeId)
             </td>
             <td>
-                <a asp-controller="ProvidenciasResp" asp-action="Create" asp-route-id="@item.FichaId">Incluir Providências</a>
+                <a asp-controller="Providencia" asp-action="Create" asp-route-id="@item.FichaId">Incluir Providências</a>
                 <a asp-action="Edit" asp-route-id="@item.FichaId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.FichaId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.FichaId">Delete</a>

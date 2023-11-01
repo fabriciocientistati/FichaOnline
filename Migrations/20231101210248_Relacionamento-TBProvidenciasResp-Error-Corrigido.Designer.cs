@@ -4,6 +4,7 @@ using FichaOnline.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FichaOnline.Migrations
 {
     [DbContext(typeof(ContextoDb))]
-    partial class ContextoDbModelSnapshot : ModelSnapshot
+    [Migration("20231101210248_Relacionamento-TBProvidenciasResp-Error-Corrigido")]
+    partial class RelacionamentoTBProvidenciasRespErrorCorrigido
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,7 +221,7 @@ namespace FichaOnline.Migrations
                     b.Property<int>("CatOpcIncPor")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoriaCatId")
+                    b.Property<int>("CategoriaCatId")
                         .HasColumnType("int");
 
                     b.HasKey("CatOpcId");
@@ -704,7 +707,9 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBCategoria", "Categoria")
                         .WithMany("CategoriaCategoriaOpcoes")
-                        .HasForeignKey("CategoriaCatId");
+                        .HasForeignKey("CategoriaCatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });

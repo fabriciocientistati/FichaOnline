@@ -4,6 +4,7 @@ using FichaOnline.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FichaOnline.Migrations
 {
     [DbContext(typeof(ContextoDb))]
-    partial class ContextoDbModelSnapshot : ModelSnapshot
+    [Migration("20231101205939_Relacionamento-TBProvidenciasResp-Error-03")]
+    partial class RelacionamentoTBProvidenciasRespError03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,7 +221,7 @@ namespace FichaOnline.Migrations
                     b.Property<int>("CatOpcIncPor")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoriaCatId")
+                    b.Property<int>("CategoriaCatId")
                         .HasColumnType("int");
 
                     b.HasKey("CatOpcId");
@@ -420,7 +423,7 @@ namespace FichaOnline.Migrations
                     b.Property<string>("FichaDefineRetorno")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("FichaDtaComunicRespons")
+                    b.Property<DateTime?>("FichaDtaComunicRespons")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("FichaId")
@@ -430,11 +433,9 @@ namespace FichaOnline.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("FichaPorQuemUsuariorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FichaPraQuemUsuariorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FichaProcedimentoUnidade")
@@ -704,7 +705,9 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBCategoria", "Categoria")
                         .WithMany("CategoriaCategoriaOpcoes")
-                        .HasForeignKey("CategoriaCatId");
+                        .HasForeignKey("CategoriaCatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });

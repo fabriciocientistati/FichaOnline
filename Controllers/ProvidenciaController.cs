@@ -10,23 +10,23 @@ using FichaOnline.Models;
 
 namespace FichaOnline.Controllers
 {
-    public class ProvidenciasRespController : Controller
+    public class ProvidenciaController : Controller
     {
         private readonly ContextoDb _context;
 
-        public ProvidenciasRespController(ContextoDb context)
+        public ProvidenciaController(ContextoDb context)
         {
             _context = context;
         }
 
-        // GET: ProvidenciasResp
+        // GET: Providencia
         public async Task<IActionResult> Index()
         {
             var contextoDb = _context.TBFICHAPROVIDENCIASRESP.Include(t => t.FichaProvFicha);
             return View(await contextoDb.ToListAsync());
         }
 
-        // GET: ProvidenciasResp/Details/5
+        // GET: Providencia/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.TBFICHAPROVIDENCIASRESP == null)
@@ -45,16 +45,17 @@ namespace FichaOnline.Controllers
             return View(tBFichaProvidenciasResp);
         }
 
-        // GET: ProvidenciasResp/Create
+        // GET: Providencia/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: ProvidenciasResp/Create
+        // POST: Providencia/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FichaProvRespId,FichaId,FichaProvRespIncPor,FichaProvRespIncEm,FichaProvRespAltPor,FichaprovRespAltEm,FichaDtaComunicRespons,FichaMeioComunic,FichaPorQuemUsuariorId,FichaPraQuemUsuariorId,FichaProcedimentoUnidade,FichaRecebidoEm,FichaDataTramitacao,FichaDefineRetorno")] TBFichaProvidenciasResp tBFichaProvidenciasResp)
         {
             if (ModelState.IsValid)
@@ -67,7 +68,7 @@ namespace FichaOnline.Controllers
             return View(tBFichaProvidenciasResp);
         }
 
-        // GET: ProvidenciasResp/Edit/5
+        // GET: Providencia/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.TBFICHAPROVIDENCIASRESP == null)
@@ -84,7 +85,7 @@ namespace FichaOnline.Controllers
             return View(tBFichaProvidenciasResp);
         }
 
-        // POST: ProvidenciasResp/Edit/5
+        // POST: Providencia/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -120,7 +121,7 @@ namespace FichaOnline.Controllers
             return View(tBFichaProvidenciasResp);
         }
 
-        // GET: ProvidenciasResp/Delete/5
+        // GET: Providencia/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.TBFICHAPROVIDENCIASRESP == null)
@@ -139,7 +140,7 @@ namespace FichaOnline.Controllers
             return View(tBFichaProvidenciasResp);
         }
 
-        // POST: ProvidenciasResp/Delete/5
+        // POST: Providencia/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

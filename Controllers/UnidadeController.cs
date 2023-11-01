@@ -49,8 +49,8 @@ namespace FichaOnline.Controllers
         // GET: Unidade/Create
         public IActionResult Create()
         {
-            ViewData["PoloId"] = new SelectList(_context.TBPOLO, "PoloId", "PoloId");
-            ViewData["UnidadesTpoId"] = new SelectList(_context.TBUNIDADETIPOS, "UnidadeTpoId", "UnidadeTpoId");
+            ViewData["PoloId"] = new SelectList(_context.TBPOLO, "PoloId", "PoloNome");
+            ViewData["UnidadesTpoId"] = new SelectList(_context.TBUNIDADETIPOS, "UnidadeTpoId", "UnidadeTpoDsc");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace FichaOnline.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UnidadeId,UnidadeCod,UnidadeDesc,UnidadeStatus,UnidadeEmail,UnidadeDDD,UnidadeFone,UnidadeCEP,UnidadeEndNmr,UnidadeEndLog,UnidadeEndComp,UnidadeIncPor,UnidadeIncEm,UnidadeAltPor,UnidadeAltEm,UnidadesTpoId,PoloId")] TBUnidades tBUnidades)
+        public async Task<IActionResult> Create([Bind("UnidadeCod,UnidadeDesc,UnidadeStatus,UnidadeEmail,UnidadeDDD,UnidadeFone,UnidadeCEP,UnidadeEndNmr,UnidadeEndLog,UnidadeEndComp,UnidadeIncPor,UnidadeIncEm,UnidadeAltPor,UnidadeAltEm,UnidadesTpoId,PoloId")] TBUnidades tBUnidades)
         {
             if (ModelState.IsValid)
             {
@@ -67,8 +67,8 @@ namespace FichaOnline.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PoloId"] = new SelectList(_context.TBPOLO, "PoloId", "PoloId", tBUnidades.PoloId);
-            ViewData["UnidadesTpoId"] = new SelectList(_context.TBUNIDADETIPOS, "UnidadeTpoId", "UnidadeTpoId", tBUnidades.UnidadesTpoId);
+            ViewData["PoloId"] = new SelectList(_context.TBPOLO, "PoloId", "PoloNome", tBUnidades.PoloId);
+            ViewData["UnidadesTpoId"] = new SelectList(_context.TBUNIDADETIPOS, "UnidadeTpoId", "UnidadeTpoDsc", tBUnidades.UnidadesTpoId);
             return View(tBUnidades);
         }
 

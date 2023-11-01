@@ -88,6 +88,7 @@ namespace FichaOnline.Controllers
                 return NotFound();
             }
             ViewData["PerfilAcessoId"] = new SelectList(_db.TBPERFILACESSO, "PerfilAcessoId", "PerfilAcessoDesc", usuario.PerfilAcessoId);
+            ViewData["UnidadeId"] = new SelectList(_db.TBUNIDADES, "UnidadeId", "UnidadeDesc", usuario.UnidadeId);
             return View(usuario);
         }
 

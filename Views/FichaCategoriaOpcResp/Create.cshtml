@@ -4,13 +4,17 @@
     ViewData["Title"] = "Create";
 }
 
+@{
+    Layout = null;
+}
+
 <h1>Create</h1>
 
 <h4>TBFichaCategoriaOpcResp</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-controller="ProvidenciasResp" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CatOpcId" class="control-label"></label>
