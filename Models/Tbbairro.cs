@@ -7,10 +7,8 @@ namespace FichaOnline.Models;
 
 public partial class TBBairro
 {
-    public TBBairro() 
-    {
+    public TBBairro() =>
         BairroIncEm = DateTime.Now;
-    }
     public TBBairro(int bairroId, string bairroNome, int bairroIncPor, int? bairroAltPor, int cidadeId, TBCidade bairroCidade, DateTime bairroIncEm, DateTime? bairroAltEm, List<TBAluno> bairroAlunos) : this()
     {
         BairroId = bairroId;

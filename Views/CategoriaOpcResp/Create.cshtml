@@ -1,0 +1,67 @@
+﻿@model FichaOnline.Models.TBFichaCategoriaOpcResp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>TBFichaCategoriaOpcResp</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CatOpcId" class="control-label"></label>
+                <select asp-for="CatOpcId" class="form-control" asp-items="ViewBag.CatOpcId"></select>
+                <span asp-validation-for="CatOpcId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaId" class="control-label"></label>
+                <input asp-for="FichaId" class="form-control" />
+                <span asp-validation-for="FichaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaCatOpcResIncPor" class="control-label"></label>
+                <input asp-for="FichaCatOpcResIncPor" class="form-control" />
+                <span asp-validation-for="FichaCatOpcResIncPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaCatOpcIncEm" class="control-label"></label>
+                <input asp-for="FichaCatOpcIncEm" class="form-control" />
+                <span asp-validation-for="FichaCatOpcIncEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaCatOpcRespAltPor" class="control-label"></label>
+                <input asp-for="FichaCatOpcRespAltPor" class="form-control" />
+                <span asp-validation-for="FichaCatOpcRespAltPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FichaCatOpcRespAltEm" class="control-label"></label>
+                <input asp-for="FichaCatOpcRespAltEm" class="form-control" />
+                <span asp-validation-for="FichaCatOpcRespAltEm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

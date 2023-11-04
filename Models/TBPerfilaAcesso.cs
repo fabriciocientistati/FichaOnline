@@ -7,10 +7,8 @@ namespace FichaOnline.Models;
 
 public partial class TBPerfilaAcesso
 {
-    public TBPerfilaAcesso()
-    {
+    public TBPerfilaAcesso() =>
         PerfilAcessoIncEm = DateTime.Now;
-    }
 
     public TBPerfilaAcesso(int perfilAcessoId, string perfilAcessoDesc, short perfilAcessoNivel, int perfilAcessoIncPor, DateTime perfilAcessoIncEm, int? perfilAcessoAltPor, DateTime? perfilAcessoAltEm, List<TBUsuarios> usuarios) : this()
     {
@@ -40,4 +38,5 @@ public partial class TBPerfilaAcesso
     public DateTime? PerfilAcessoAltEm { get; set; }
 
     public List<TBUsuarios> Usuarios { get; set; }
+
 }

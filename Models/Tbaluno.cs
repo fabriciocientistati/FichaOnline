@@ -7,10 +7,8 @@ namespace FichaOnline.Models;
 
 public partial class TBAluno
 {
-    public TBAluno()
-    {
+    public TBAluno() =>
         AluIncEm = DateTime.Now;
-    }
     public TBAluno(int aluId, string aluNom, string aluNomSoc, DateTime aluDtaNasc, string aluCpf, string aluSexo, string aluFiliacao1, string aluFiliacao2, string aluFiliacao3, int? aluIdinep, string aluRaca, string aluEndLog, string aluEndNmrLog, string aluEndCmpLog, string aluEndBairro, string aluEndCep, string aluTelResDdd, string aluTelRes, string aluTelCelDdd, string aluTelCel, string aluTelConDdd, string aluTelCon, string aluObs, string aluStatus, int aluIncPor, DateTime aluIncEm, int? aluAltPor, DateTime? aluAltEm, int? bairroId, int gedAluCod, TBBairro alunoBairro, List<TBFicha> alunoFicha) : this()
     {
         AluId = aluId;

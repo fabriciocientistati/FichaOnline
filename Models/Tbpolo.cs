@@ -7,10 +7,8 @@ namespace FichaOnline.Models;
 
 public partial class TBPolo
 {
-    public TBPolo() 
-    {
+    public TBPolo() =>
         PoloIncEm = DateTime.Now;
-    }
 
     public TBPolo(int poloId, string poloNome, string poloStatus, int poloIncPor, DateTime poloIncEm, int? poloAltPor, DateTime? poloAltEm, List<TBUnidades> unidadePolos) : this()
     {

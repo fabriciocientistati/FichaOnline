@@ -7,10 +7,8 @@ namespace FichaOnline.Models;
 
 public partial class TBEstado
 {
-    public TBEstado() 
-    {
+    public TBEstado() =>
         EstIncEm = DateTime.Now;
-    }
 
     public TBEstado(int estId, string estSgl, string estNom, int estIncPor, DateTime? estIncEm, int? estAltPor, DateTime? estAltEm, List<TBCidade> estadoCidades) : this()
     {

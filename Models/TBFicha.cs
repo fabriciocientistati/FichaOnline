@@ -7,11 +7,10 @@ namespace FichaOnline.Models;
 
 public partial class TBFicha
 {
-    public TBFicha()
-    {
+    public TBFicha() =>
         FichaIncEm = DateTime.Now;
-    }
-    public TBFicha(int fichaId, int fichaCatId, int fichaStsId, int fichaAtualUnidadeId, string fichaNova, int aluId, int fichaEscOrigemUnidadeId, DateTime fichaDtaIni, DateTime? fichaDtaFim, int fichaIncPor, DateTime fichaIncEm, int? fichaAltPor, DateTime? fichaAltEm, TBAluno fichaAluno, TBUnidades fichaEscOrigemUnidade, TBFichaProvidenciasResp fichaFichaProv, TBCategoria fichaCategoria) : this()
+
+    public TBFicha(int fichaId, int fichaCatId, int fichaStsId, int fichaAtualUnidadeId, string fichaNova, int aluId, int fichaEscOrigemUnidadeId, DateTime fichaDtaIni, DateTime? fichaDtaFim, int fichaIncPor, DateTime fichaIncEm, int? fichaAltPor, DateTime? fichaAltEm, TBAluno fichaAluno, TBUnidades fichaEscOrigemUnidade, List<TBFichaProvidenciasResp> fichaFichaProv, TBCategoria fichaCategoria, List<TBFichaCategoriaOpcResp> fichaCatOpcResp) : this()
     {
         FichaId = fichaId;
         FichaCatId = fichaCatId;
@@ -30,6 +29,7 @@ public partial class TBFicha
         FichaEscOrigemUnidade = fichaEscOrigemUnidade;
         FichaFichaProv = fichaFichaProv;
         FichaCategoria = fichaCategoria;
+        FichaCatOpcResp = fichaCatOpcResp;
     }
 
     [Key]
@@ -63,7 +63,9 @@ public partial class TBFicha
 
     public TBUnidades FichaEscOrigemUnidade { get; set; }
 
-    public TBFichaProvidenciasResp FichaFichaProv { get; set; }
+    public List<TBFichaProvidenciasResp> FichaFichaProv { get; set; }
 
     public TBCategoria FichaCategoria { get; set; }
+
+    public List<TBFichaCategoriaOpcResp> FichaCatOpcResp { get; set; }
 }

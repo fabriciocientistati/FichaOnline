@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FichaOnline.Models
 {
     public class TBFichaProvidenciasResp
     {
-        public TBFichaProvidenciasResp() 
-        {
+        public TBFichaProvidenciasResp() =>
             FichaProvRespIncEm = DateTime.Now;
-        }
+        
         public TBFichaProvidenciasResp(int fichaProvRespId, int fichaId, int fichaProvRespIncPor, DateTime fichaProvRespIncEm, int? fichaProvRespAltPor, DateTime? fichaprovRespAltEm, DateTime fichaDtaComunicRespons, int? fichaMeioComunic, string fichaPorQuemUsuariorId, string fichaPraQuemUsuariorId, string? fichaProcedimentoUnidade, DateTime? fichaRecebidoEm, DateTime? fichaDataTramitacao, string? fichaDefineRetorno, TBFicha? fichaProvFicha) : this()
         {
             FichaProvRespId = fichaProvRespId;

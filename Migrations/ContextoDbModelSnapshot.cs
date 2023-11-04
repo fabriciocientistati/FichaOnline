@@ -111,9 +111,6 @@ namespace FichaOnline.Migrations
                     b.Property<string>("AluTelResDdd")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("AlunoBairroBairroId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("BairroId")
                         .HasColumnType("int");
 
@@ -122,7 +119,7 @@ namespace FichaOnline.Migrations
 
                     b.HasKey("AluId");
 
-                    b.HasIndex("AlunoBairroBairroId");
+                    b.HasIndex("BairroId");
 
                     b.ToTable("TBALUNO");
                 });
@@ -218,12 +215,9 @@ namespace FichaOnline.Migrations
                     b.Property<int>("CatOpcIncPor")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoriaCatId")
-                        .HasColumnType("int");
-
                     b.HasKey("CatOpcId");
 
-                    b.HasIndex("CategoriaCatId");
+                    b.HasIndex("CatId");
 
                     b.ToTable("TBCATEGORIAOPCOES");
                 });
@@ -321,16 +315,10 @@ namespace FichaOnline.Migrations
                     b.Property<int?>("FichaAltPor")
                         .HasColumnType("int");
 
-                    b.Property<int?>("FichaAlunoAluId")
-                        .HasColumnType("int");
-
                     b.Property<int>("FichaAtualUnidadeId")
                         .HasColumnType("int");
 
                     b.Property<int>("FichaCatId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("FichaCategoriaCatId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("FichaDtaFim")
@@ -356,9 +344,9 @@ namespace FichaOnline.Migrations
 
                     b.HasKey("FichaId");
 
-                    b.HasIndex("FichaAlunoAluId");
+                    b.HasIndex("AluId");
 
-                    b.HasIndex("FichaCategoriaCatId");
+                    b.HasIndex("FichaCatId");
 
                     b.HasIndex("FichaEscOrigemUnidadeId");
 
@@ -374,12 +362,6 @@ namespace FichaOnline.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FichaCatOpcRespId"));
 
                     b.Property<int>("CatOpcId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CatOpcRespCatOpcCatOpcId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CatOpcRespFichaFichaId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FichaCatOpcIncEm")
@@ -399,9 +381,9 @@ namespace FichaOnline.Migrations
 
                     b.HasKey("FichaCatOpcRespId");
 
-                    b.HasIndex("CatOpcRespCatOpcCatOpcId");
+                    b.HasIndex("CatOpcId");
 
-                    b.HasIndex("CatOpcRespFichaFichaId");
+                    b.HasIndex("FichaId");
 
                     b.ToTable("TBCATEGORIAOPCRESP");
                 });
@@ -457,8 +439,7 @@ namespace FichaOnline.Migrations
 
                     b.HasKey("FichaProvRespId");
 
-                    b.HasIndex("FichaId")
-                        .IsUnique();
+                    b.HasIndex("FichaId");
 
                     b.ToTable("TBFICHAPROVIDENCIASRESP");
                 });
@@ -684,7 +665,7 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBBairro", "AlunoBairro")
                         .WithMany("BairroAlunos")
-                        .HasForeignKey("AlunoBairroBairroId");
+                        .HasForeignKey("BairroId");
 
                     b.Navigation("AlunoBairro");
                 });
@@ -704,7 +685,9 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBCategoria", "Categoria")
                         .WithMany("CategoriaCategoriaOpcoes")
-                        .HasForeignKey("CategoriaCatId");
+                        .HasForeignKey("CatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });
@@ -724,11 +707,15 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBAluno", "FichaAluno")
                         .WithMany("AlunoFicha")
-                        .HasForeignKey("FichaAlunoAluId");
+                        .HasForeignKey("AluId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBCategoria", "FichaCategoria")
                         .WithMany("CategoriaFicha")
-                        .HasForeignKey("FichaCategoriaCatId");
+                        .HasForeignKey("FichaCatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBUnidades", "FichaEscOrigemUnidade")
                         .WithMany()
@@ -746,15 +733,15 @@ namespace FichaOnline.Migrations
             modelBuilder.Entity("FichaOnline.Models.TBFichaCategoriaOpcResp", b =>
                 {
                     b.HasOne("FichaOnline.Models.TBCategoriaOpcoes", "CatOpcRespCatOpc")
-                        .WithMany()
-                        .HasForeignKey("CatOpcRespCatOpcCatOpcId")
+                        .WithMany("FichaCategoriaOpcResps")
+                        .HasForeignKey("CatOpcId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FichaOnline.Models.TBFicha", "CatOpcRespFicha")
-                        .WithMany()
-                        .HasForeignKey("CatOpcRespFichaFichaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("FichaCatOpcResp")
+                        .HasForeignKey("FichaId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("CatOpcRespCatOpc");
@@ -765,8 +752,8 @@ namespace FichaOnline.Migrations
             modelBuilder.Entity("FichaOnline.Models.TBFichaProvidenciasResp", b =>
                 {
                     b.HasOne("FichaOnline.Models.TBFicha", "FichaProvFicha")
-                        .WithOne("FichaFichaProv")
-                        .HasForeignKey("FichaOnline.Models.TBFichaProvidenciasResp", "FichaId")
+                        .WithMany("FichaFichaProv")
+                        .HasForeignKey("FichaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -828,6 +815,11 @@ namespace FichaOnline.Migrations
                     b.Navigation("CategoriaFicha");
                 });
 
+            modelBuilder.Entity("FichaOnline.Models.TBCategoriaOpcoes", b =>
+                {
+                    b.Navigation("FichaCategoriaOpcResps");
+                });
+
             modelBuilder.Entity("FichaOnline.Models.TBCidade", b =>
                 {
                     b.Navigation("CidadeBairros");
@@ -840,6 +832,8 @@ namespace FichaOnline.Migrations
 
             modelBuilder.Entity("FichaOnline.Models.TBFicha", b =>
                 {
+                    b.Navigation("FichaCatOpcResp");
+
                     b.Navigation("FichaFichaProv");
                 });
 

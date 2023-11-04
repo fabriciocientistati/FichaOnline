@@ -55,8 +55,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: CategoriaOpcoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CatId,CatOpcDesc,CatOpcIncPor,CatOpcIncEm,CatOpcAltPor,CatOpcAltEm")] TBCategoriaOpcoes tBCategoriaOpcoes)
@@ -87,8 +86,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: CategoriaOpcoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CatOpcId,CatId,CatOpcDesc,CatOpcIncPor,CatOpcIncEm,CatOpcAltPor,CatOpcAltEm")] TBCategoriaOpcoes tBCategoriaOpcoes)

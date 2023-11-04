@@ -54,9 +54,7 @@ namespace FichaOnline.Controllers
             return View();
         }
 
-        // POST: Ficha/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FichaId,FichaCatId,FichaStsId,FichaAtualUnidadeId,FichaNova,AluId,FichaEscOrigemUnidadeId,FichaDtaIni,FichaDtaFim,FichaIncPor,FichaIncEm,FichaAltPor,FichaAltEm")] TBFicha tBFicha)
@@ -88,9 +86,6 @@ namespace FichaOnline.Controllers
             return View(tBFicha);
         }
 
-        // POST: Ficha/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("FichaId,FichaCatId,FichaStsId,FichaAtualUnidadeId,FichaNova,AluId,FichaEscOrigemUnidadeId,FichaDtaIni,FichaDtaFim,FichaIncPor,FichaIncEm,FichaAltPor,FichaAltEm")] TBFicha tBFicha)

@@ -52,8 +52,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Polo/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PoloId,PoloNome,PoloStatus,PoloIncPor,PoloIncEm,PoloAltPor,PoloAltEm")] TBPolo tBPolo)
@@ -84,8 +83,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Polo/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PoloId,PoloNome,PoloStatus,PoloIncPor,PoloIncEm,PoloAltPor,PoloAltEm")] TBPolo tBPolo)

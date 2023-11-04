@@ -22,6 +22,7 @@ namespace FichaOnline.Data
         public DbSet<TBCategoriaOpcoes> TBCATEGORIAOPCOES { get; set; }
         public DbSet<TBFichaCategoriaOpcResp> TBCATEGORIAOPCRESP { get; set; }
         public DbSet<TBFichaProvidenciasResp> TBFICHAPROVIDENCIASRESP { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TBFicha>()
@@ -67,9 +68,40 @@ namespace FichaOnline.Data
                 .HasKey(x => x.EstId);
 
             modelBuilder.Entity<TBFicha>()
-                .HasOne(f => f.FichaFichaProv)
+                .HasMany(f => f.FichaFichaProv)
                 .WithOne(fp => fp.FichaProvFicha)
-                .HasForeignKey<TBFichaProvidenciasResp>(fp => fp.FichaId);
+                .HasForeignKey(fp => fp.FichaId);
+
+            modelBuilder.Entity<TBFicha>()
+                .HasMany(f => f.FichaCatOpcResp)
+                .WithOne(catopcresp => catopcresp.CatOpcRespFicha)
+                .HasForeignKey(catopcresp => catopcresp.FichaId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<TBCategoriaOpcoes>()
+                .HasOne(catop => catop.Categoria)
+                .WithMany(cat => cat.CategoriaCategoriaOpcoes)
+                .HasForeignKey(catop => catop.CatId);
+
+            modelBuilder.Entity<TBFichaCategoriaOpcResp>()
+                .HasOne(catopresp => catopresp.CatOpcRespCatOpc)
+                .WithMany(catopc => catopc.FichaCategoriaOpcResps)
+                .HasForeignKey(catopresp => catopresp.CatOpcId);
+
+            modelBuilder.Entity<TBCategoria>()
+                .HasMany(c => c.CategoriaFicha)
+                .WithOne(f => f.FichaCategoria)
+                .HasForeignKey(f => f.FichaCatId);
+
+            modelBuilder.Entity<TBAluno>()
+                .HasMany(a => a.AlunoFicha)
+                .WithOne(f => f.FichaAluno)
+                .HasForeignKey(f => f.AluId);
+
+            modelBuilder.Entity<TBBairro>()
+                .HasMany(b => b.BairroAlunos)
+                .WithOne(a => a.AlunoBairro) 
+                .HasForeignKey(a => a.BairroId);
 
             modelBuilder.Entity<TBCidade>()
                 .HasOne(cid => cid.CidEstado)

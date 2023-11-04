@@ -53,8 +53,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Aluno/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AluId,AluNom,AluNomSoc,AluDtaNasc,AluCpf,AluSexo,AluFiliacao1,AluFiliacao2,AluFiliacao3,AluIdinep,AluRaca,AluEndLog,AluEndNmrLog,AluEndCmpLog,AluEndBairro,AluEndCep,AluTelResDdd,AluTelRes,AluTelCelDdd,AluTelCel,AluTelConDdd,AluTelCon,AluObs,AluStatus,AluIncPor,AluIncEm,AluAltPor,AluAltEm,BairroId,GedAluCod")] TBAluno tBAluno)
@@ -85,8 +84,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Aluno/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("AluId,AluNom,AluNomSoc,AluDtaNasc,AluCpf,AluSexo,AluFiliacao1,AluFiliacao2,AluFiliacao3,AluIdinep,AluRaca,AluEndLog,AluEndNmrLog,AluEndCmpLog,AluEndBairro,AluEndCep,AluTelResDdd,AluTelRes,AluTelCelDdd,AluTelCel,AluTelConDdd,AluTelCon,AluObs,AluStatus,AluIncPor,AluIncEm,AluAltPor,AluAltEm,BairroId,GedAluCod")] TBAluno tBAluno)

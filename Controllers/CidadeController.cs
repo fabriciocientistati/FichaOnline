@@ -53,8 +53,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Cidade/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CidId,CidNom,CidEstNom,CidCodIbge,CidTipo,CidIdDistrito,CidNomDistrito,CidIncPor,CidIncEm,CidAltPor,CidAltEm,EstId")] TBCidade tBCidade)
@@ -87,8 +86,7 @@ namespace FichaOnline.Controllers
         }
 
         // POST: Cidade/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CidId,CidNom,CidEstNom,CidCodIbge,CidTipo,CidIdDistrito,CidNomDistrito,CidIncPor,CidIncEm,CidAltPor,CidAltEm,EstId")] TBCidade tBCidade)

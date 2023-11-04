@@ -1,0 +1,63 @@
+﻿@model FichaOnline.Models.TBFichaCategoriaOpcResp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>TBFichaCategoriaOpcResp</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CatOpcId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CatOpcId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FichaId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FichaId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FichaCatOpcResIncPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FichaCatOpcResIncPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FichaCatOpcIncEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FichaCatOpcIncEm)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FichaCatOpcRespAltPor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FichaCatOpcRespAltPor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FichaCatOpcRespAltEm)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FichaCatOpcRespAltEm)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.FichaCatOpcRespId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

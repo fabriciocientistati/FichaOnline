@@ -8,10 +8,8 @@ namespace FichaOnline.Models;
 
 public partial class TBCidade
 {
-    public TBCidade() 
-    {
+    public TBCidade() =>
         CidIncEm = DateTime.Now;
-    }
 
     public TBCidade(int cidId, string cidNom, long? cidCodIbge, int? cidTipo, int? cidIdDistrito, string cidNomDistrito, int cidIncPor, DateTime cidIncEm, int? cidAltPor, DateTime? cidAltEm, int estId, TBEstado cidEstado, List<TBBairro> cidadeBairros) : this()
     {

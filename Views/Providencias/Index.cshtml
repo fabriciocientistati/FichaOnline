@@ -1,0 +1,115 @@
+﻿@model IEnumerable<FichaOnline.Models.TBFichaProvidenciasResp>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaProvRespIncPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaProvRespIncEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaProvRespAltPor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaprovRespAltEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaDtaComunicRespons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaMeioComunic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaPorQuemUsuariorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaPraQuemUsuariorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaProcedimentoUnidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaRecebidoEm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaDataTramitacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FichaDefineRetorno)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaProvRespIncPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaProvRespIncEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaProvRespAltPor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaprovRespAltEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaDtaComunicRespons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaMeioComunic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaPorQuemUsuariorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaPraQuemUsuariorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaProcedimentoUnidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaRecebidoEm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaDataTramitacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FichaDefineRetorno)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FichaProvRespId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FichaProvRespId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FichaProvRespId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

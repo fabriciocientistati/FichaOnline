@@ -4,11 +4,10 @@ namespace FichaOnline.Models
 {
     public class TBFichaCategoriaOpcResp
     {
-        public TBFichaCategoriaOpcResp()
-        {
+        public TBFichaCategoriaOpcResp() =>
             FichaCatOpcIncEm = DateTime.Now;
-        }
-        public TBFichaCategoriaOpcResp(int fichaCatOpcRespId, int catOpcId, int fichaId, int fichaCatOpcResIncPor, DateTime fichaCatOpcIncEm, int? fichaCatOpcRespAltPor, DateTime? fichaCatOpcRespAltEm, TBFicha catOpcRespFicha, TBCategoriaOpcoes catOpcRespCatOpc) : this()
+
+        public TBFichaCategoriaOpcResp(int fichaCatOpcRespId, int catOpcId, int fichaId, int fichaCatOpcResIncPor, DateTime fichaCatOpcIncEm, int? fichaCatOpcRespAltPor, DateTime? fichaCatOpcRespAltEm, TBFicha catOpcRespFicha, TBCategoriaOpcoes? catOpcRespCatOpc)
         {
             FichaCatOpcRespId = fichaCatOpcRespId;
             CatOpcId = catOpcId;
@@ -28,8 +27,8 @@ namespace FichaOnline.Models
         public int FichaCatOpcResIncPor { get; set; }
         public DateTime FichaCatOpcIncEm { get; set; } = DateTime.Now;
         public int? FichaCatOpcRespAltPor { get; set; }
-        public DateTime? FichaCatOpcRespAltEm { get; set; } = DateTime.Now;
-        public required TBFicha CatOpcRespFicha { get; set; }
-        public required TBCategoriaOpcoes CatOpcRespCatOpc { get; set; }
+        public DateTime? FichaCatOpcRespAltEm { get; set; } 
+        public TBFicha CatOpcRespFicha { get; set; }
+        public TBCategoriaOpcoes? CatOpcRespCatOpc { get; set; }
     }
 }

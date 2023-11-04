@@ -5,10 +5,8 @@ namespace FichaOnline.Models
 {
     public class TBUnidades
     {
-        public TBUnidades() 
-        { 
+        public TBUnidades() =>
             UnidadeIncEm = DateTime.Now;
-        }
 
         public TBUnidades(int unidadeId, int unidadeCod, string unidadeDesc, string unidadeStatus, string unidadeEmail, string unidadeDDD, string unidadeFone, string unidadeCEP, string unidadeEndNmr, string unidadeEndLog, string unidadeEndComp, int unidadeIncPor, DateTime unidadeIncEm, int? unidadeAltPor, DateTime? unidadeAltEm, int unidadesTpoId, int poloId, TBUnidadeTipos tiposUnidade, TBPolo polo, List<TBUsuarios> unidadeUsuarios) : this()
         {
