@@ -6,7 +6,7 @@ namespace FichaOnline.Data
 {
     public class ContextoDb : DbContext
     {
-        public ContextoDb(DbContextOptions options): base(options) { }
+        public ContextoDb(DbContextOptions options) : base(options) { }
 
         public DbSet<TBUsuarios> TBUSUARIOS { get; set; }
         public DbSet<TBPerfilaAcesso> TBPERFILACESSO { get; set; }
@@ -83,6 +83,12 @@ namespace FichaOnline.Data
                 .WithMany(cat => cat.CategoriaCategoriaOpcoes)
                 .HasForeignKey(catop => catop.CatId);
 
+
+            modelBuilder.Entity<TBFichaCategoriaOpcResp>()
+                .HasOne(catresp => catresp.CatOpcRespFicha)
+                .WithMany(f => f.FichaCatOpcResp)
+                .HasForeignKey(catresp => catresp.FichaId);
+
             modelBuilder.Entity<TBFichaCategoriaOpcResp>()
                 .HasOne(catopresp => catopresp.CatOpcRespCatOpc)
                 .WithMany(catopc => catopc.FichaCategoriaOpcResps)
@@ -100,7 +106,7 @@ namespace FichaOnline.Data
 
             modelBuilder.Entity<TBBairro>()
                 .HasMany(b => b.BairroAlunos)
-                .WithOne(a => a.AlunoBairro) 
+                .WithOne(a => a.AlunoBairro)
                 .HasForeignKey(a => a.BairroId);
 
             modelBuilder.Entity<TBCidade>()

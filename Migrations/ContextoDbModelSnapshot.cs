@@ -215,6 +215,9 @@ namespace FichaOnline.Migrations
                     b.Property<int>("CatOpcIncPor")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Selecionado")
+                        .HasColumnType("bit");
+
                     b.HasKey("CatOpcId");
 
                     b.HasIndex("CatId");
@@ -361,7 +364,7 @@ namespace FichaOnline.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FichaCatOpcRespId"));
 
-                    b.Property<int>("CatOpcId")
+                    b.Property<int?>("CatOpcId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FichaCatOpcIncEm")
@@ -376,7 +379,7 @@ namespace FichaOnline.Migrations
                     b.Property<int?>("FichaCatOpcRespAltPor")
                         .HasColumnType("int");
 
-                    b.Property<int>("FichaId")
+                    b.Property<int?>("FichaId")
                         .HasColumnType("int");
 
                     b.HasKey("FichaCatOpcRespId");
@@ -734,15 +737,12 @@ namespace FichaOnline.Migrations
                 {
                     b.HasOne("FichaOnline.Models.TBCategoriaOpcoes", "CatOpcRespCatOpc")
                         .WithMany("FichaCategoriaOpcResps")
-                        .HasForeignKey("CatOpcId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CatOpcId");
 
                     b.HasOne("FichaOnline.Models.TBFicha", "CatOpcRespFicha")
                         .WithMany("FichaCatOpcResp")
                         .HasForeignKey("FichaId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("CatOpcRespCatOpc");
 

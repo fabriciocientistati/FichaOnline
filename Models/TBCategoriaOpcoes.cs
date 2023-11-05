@@ -6,7 +6,7 @@ namespace FichaOnline.Models
     {
         public TBCategoriaOpcoes() =>
             CatOpcIncEm = DateTime.Now;
-        public TBCategoriaOpcoes(int catOpcId, int catId, string catOpcDesc, int catOpcIncPor, DateTime catOpcIncEm, int? catOpcAltPor, DateTime? catOpcAltEm, TBCategoria? categoria, List<TBFichaCategoriaOpcResp>? fichaCategoriaOpcResps) : this()
+        public TBCategoriaOpcoes(int catOpcId, int catId, string catOpcDesc, int catOpcIncPor, DateTime catOpcIncEm, int? catOpcAltPor, DateTime? catOpcAltEm, TBCategoria categoria, bool selecionado, List<TBFichaCategoriaOpcResp>? fichaCategoriaOpcResps) : this()
         {
             CatOpcId = catOpcId;
             CatId = catId;
@@ -16,6 +16,7 @@ namespace FichaOnline.Models
             CatOpcAltPor = catOpcAltPor;
             CatOpcAltEm = catOpcAltEm;
             Categoria = categoria;
+            Selecionado = selecionado;
             FichaCategoriaOpcResps = fichaCategoriaOpcResps;
         }
 
@@ -27,7 +28,8 @@ namespace FichaOnline.Models
         public DateTime CatOpcIncEm { get; set; } = DateTime.Now;
         public int? CatOpcAltPor { get; set; }
         public DateTime? CatOpcAltEm { get; set; } = DateTime.Now;
-        public TBCategoria? Categoria { get; set; }
+        public TBCategoria Categoria { get; set; }
+        public bool Selecionado { get; set; }
         public List<TBFichaCategoriaOpcResp>? FichaCategoriaOpcResps { get; set; }
     }
 }
