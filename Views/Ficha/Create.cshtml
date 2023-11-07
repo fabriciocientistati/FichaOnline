@@ -1,4 +1,4 @@
-﻿@model FichaOnline.Models.TBFicha
+﻿@model FichaOnline.Models.ViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -10,39 +10,59 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-            <form asp-action="Create">
+        <form asp-controller="Ficha" asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <select asp-for="FichaCatId" class="form-control" asp-items="ViewBag.CatId"></select>
+                <select asp-for="TBFicha.FichaCatId" class="form-control" id="fichaCatSelect" asp-items="ViewBag.CatId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="AluId" class="control-label"></label>
-                <select asp-for="AluId" class="form-control" asp-items="ViewBag.AluId"></select>
+                <label asp-for="TBFicha.AluId" class="control-label"></label>
+                <select asp-for="TBFicha.AluId" class="form-control" asp-items="ViewBag.AluId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="FichaEscOrigemUnidadeId" class="control-label"></label>
-                <select asp-for="FichaEscOrigemUnidadeId" class="form-control" asp-items="ViewBag.FichaEscOrigemUnidadeId"></select>
+                <label asp-for="TBFicha.FichaEscOrigemUnidadeId" class="control-label"></label>
+                <select asp-for="TBFicha.FichaEscOrigemUnidadeId" class="form-control" asp-items="ViewBag.FichaEscOrigemUnidadeId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="FichaStsId" class="control-label"></label>
-                <input asp-for="FichaStsId" class="form-control" />
-                <span asp-validation-for="FichaStsId" class="text-danger"></span>
+                <label asp-for="TBFicha.FichaStsId" class="control-label"></label>
+                <input asp-for="TBFicha.FichaStsId" class="form-control" />
+                <span asp-validation-for="TBFicha.FichaStsId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FichaDtaIni" class="control-label"></label>
-                <input asp-for="FichaDtaIni" class="form-control" />
-                <span asp-validation-for="FichaDtaIni" class="text-danger"></span>
+                <label asp-for="TBFicha.FichaDtaIni" class="control-label"></label>
+                <input asp-for="TBFicha.FichaDtaIni" class="form-control" />
+                <span asp-validation-for="TBFicha.FichaDtaIni" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FichaIncPor" class="control-label"></label>
-                <input asp-for="FichaIncPor" class="form-control" />
-                <span asp-validation-for="FichaIncPor" class="text-danger"></span>
+                <label asp-for="TBFicha.FichaIncPor" class="control-label"></label>
+                <input asp-for="TBFicha.FichaIncPor" class="form-control" />
+                <span asp-validation-for="TBFicha.FichaIncPor" class="text-danger"></span>
             </div>
-@*             <div class="form-group">
-                <label asp-for="FichaIncEm" class="control-label"></label>
-                <input asp-for="FichaIncEm" class="form-control" />
-                <span asp-validation-for="FichaIncEm" class="text-danger"></span>
-            </div> *@
+            <div class="form-group">
+                <label asp-for="TBFicha.FichaIncEm" class="control-label"></label>
+                <input asp-for="TBFicha.FichaIncEm" class="form-control" />
+                <span asp-validation-for="TBFicha.FichaIncEm" class="text-danger"></span>
+            </div>
+
+            <br /><br />
+
+
+
+            <div class="form-control checkboxes-container">
+                <h3>Selecione os itens desejados:</h3>
+
+                <ul>
+                    @for (var i = 0; i < Model.ListCategoriaOpcoes.Count; i++)
+                    {
+                        <li>
+                            @Html.HiddenFor(m => Model.ListCategoriaOpcoes[i].CatOpcId)
+                            @Html.CheckBoxFor(m => Model.ListCategoriaOpcoes[i].Selecionado)
+                            @Model.ListCategoriaOpcoes[i].CatOpcDesc
+                        </li>
+                    }
+                </ul>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -53,7 +73,42 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+@* 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Certifique-se de incluir o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            // Seleciona o elemento select
+            var select = $('#fichaCatSelect');
+
+            // Seleciona o contêiner de checkboxes
+            var checkboxContainer = $('.checkboxes-container');
+
+            // Evento de alteração no select
+            select.on('change', function () {
+                var selectedCategoryId = select.val(); // Obtém o valor selecionado na select
+
+                // Oculta todos os checkboxes
+                checkboxContainer.find('li').hide();
+
+                // Mostra os checkboxes com base na categoria selecionada
+                checkboxContainer.find('li').each(function () {
+                    var checkbox = $(this);
+                    var categoryId = checkbox.find('input[type="hidden"]').val();
+
+                    if (categoryId === selectedCategoryId) {
+                        checkbox.show();
+                    }
+                });
+            });
+        });
+    </script>
+ *@
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    } 
 }

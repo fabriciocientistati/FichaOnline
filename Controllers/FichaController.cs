@@ -10,6 +10,7 @@ using FichaOnline.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Transactions;
 using FichaOnline.Migrations;
+using Xunit.Abstractions;
 
 namespace FichaOnline.Controllers
 {
@@ -24,7 +25,7 @@ namespace FichaOnline.Controllers
 
         public IActionResult Index()
         {
-            var contextoDb = _context.TBFICHA.Include(t => t.FichaEscOrigemUnidade);
+            var contextoDb = _context.TBFICHA.Include(t => t.FichaCatOpcResp);
             return View(contextoDb);
         }
 
@@ -33,30 +34,59 @@ namespace FichaOnline.Controllers
             ViewData["FichaEscOrigemUnidadeId"] = new SelectList(_context.TBUNIDADES, "UnidadeId", "UnidadeDesc");
             ViewData["AluId"] = new SelectList(_context.TBALUNO, "AluId", "AluNom");
             ViewData["CatId"] = new SelectList(_context.TBCATEGORIA, "CatId", "CatDesc");
-            List<TBCategoriaOpcoes> itens = _context.TBCATEGORIAOPCOES.ToList();
-            return View(itens);
+            //List<TBCategoriaOpcoes> itens = _context.TBCATEGORIAOPCOES.ToList();
+
+            var model = new ViewModel()
+            {
+                ListCategoriaOpcoes = _context.TBCATEGORIAOPCOES.ToList(),
+                TBFicha = new TBFicha(),
+            };
+
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FichaId,FichaCatId,FichaStsId,FichaAtualUnidadeId,FichaNova,AluId,FichaEscOrigemUnidadeId,FichaDtaIni,FichaDtaFim,FichaIncPor,FichaIncEm,FichaAltPor,FichaAltEm")] TBFicha tBFicha)
+        public async Task<IActionResult> Create(ViewModel model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
+                _context.TBFICHA.Add(model.TBFicha);
+                await _context.SaveChangesAsync();
+
+                var fichaid = model.TBFicha.FichaId;
+                var incluidoPor = model.TBFicha.FichaIncPor;
+                var incluidoEm = model.TBFicha.FichaIncEm;
+
+                if (model != null && model.ListCategoriaOpcoes.Any(items => items.Selecionado))
                 {
-                    
-                    _context.Add(tBFicha);
-                    await _context.SaveChangesAsync();
+                    foreach (var item in model.ListCategoriaOpcoes)
+                    {
+                        if (item.Selecionado)
+                        {
+                            var tBFichaCategoriaOpcResp = new TBFichaCategoriaOpcResp
+                            {
+                                FichaId = fichaid,
+                                CatOpcId = item.CatOpcId,
+                                FichaCatOpcResIncPor = incluidoPor,
+                                FichaCatOpcIncEm = incluidoEm
+                            };
+
+                            _context.TBCATEGORIAOPCRESP.Add(tBFichaCategoriaOpcResp);
+                            await _context.SaveChangesAsync();
+                        }
+                    }
                     return RedirectToAction(nameof(Index));
                 }
-                catch (Exception ex)
-                {
 
-                    return View(ex.Message);
-                }
             }
-            return View(tBFicha);
+            catch (Exception ex)
+            {
+
+                return View(ex.Message);
+            }
+
+            return View(model);
         }
 
 
@@ -153,43 +183,5 @@ namespace FichaOnline.Controllers
             return (_context.TBFICHA?.Any(e => e.FichaId == id)).GetValueOrDefault();
         }
 
-        public async Task<IActionResult> SalvarSelecionados()
-        {
-            List<TBCategoriaOpcoes> items = _context.TBCATEGORIAOPCOES.ToList();
-            return View(items);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> SalvarSelecionados(List<TBCategoriaOpcoes> items)
-        {
-            if (items != null && items.Any(items => items.Selecionado))
-            {
-                try
-                {
-                    foreach (var item in items)
-                    {
-                        if (item.Selecionado)
-                        {
-                            var tBFichaCategoriaOpcResp = new TBFichaCategoriaOpcResp
-                            {
-                                FichaId = 8,
-                                CatOpcId = item.CatOpcId,
-                                FichaCatOpcResIncPor = 22,
-                                FichaCatOpcIncEm = DateTime.Now
-                            };
-
-                            _context.TBCATEGORIAOPCRESP.Add(tBFichaCategoriaOpcResp);
-                            await _context.SaveChangesAsync();
-                        }
-                    }
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (Exception ex)
-                {
-                    return NotFound(ex.Message);
-                }
-            }
-            return View("SalvarSelecionados");
-        }
     }
 }
